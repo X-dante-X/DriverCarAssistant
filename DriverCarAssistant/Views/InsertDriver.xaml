@@ -9,17 +9,270 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Frame
+                x:Name="mainFrame"
+                JournalOwnership="OwnsJournal"
+                NavigationUIVisibility="Hidden" />
+            <Label
+                Margin="0,23,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Content="Insert data to add a new driver" />
 
-    <Grid>
-        <Frame
-            x:Name="mainFrame"
-            JournalOwnership="OwnsJournal"
-            NavigationUIVisibility="Hidden" />
-        <Button
-            Margin="0,269,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Content="Button" />
+            <Label
+                Width="60"
+                Height="30"
+                Margin="200,75,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="PESEL" />
+            <TextBox
+                Width="120"
+                Height="30"
+                Margin="370,75,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding PESEL}"
+                TextWrapping="Wrap" />
 
-    </Grid>
+            <Label
+                Width="100"
+                Height="30"
+                Margin="200,150,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="First name" />
+            <TextBox
+                Width="120"
+                Height="30"
+                Margin="370,150,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding FirstName}"
+                TextWrapping="Wrap" />
+
+            <Label
+                Width="100"
+                Height="30"
+                Margin="200,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Second name" />
+            <TextBox
+                Width="120"
+                Height="30"
+                Margin="370,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding SecondName}"
+                TextWrapping="Wrap" />
+
+            <Label
+                Width="125"
+                Height="30"
+                Margin="200,300,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Passport Number" />
+            <TextBox
+                Width="120"
+                Height="30"
+                Margin="370,300,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding Passport.PassportNumber}"
+                TextWrapping="Wrap" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,375,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Passport Date of Birth" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,375,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding Passport.DateOfBirth}" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,450,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Passport Date of Issue" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,450,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding Passport.DateOfIssue}" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,525,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Passport Date of Expiry" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,525,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding Passport.DateOfExpiry}" />
+
+            <Label
+                Width="200"
+                Height="30"
+                Margin="200,600,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Driving License Date of Issue" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,600,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding DrivingLicense.DateOfIssue}" />
+
+            <Label
+                Width="200"
+                Height="30"
+                Margin="200,675,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Driving License Date of Expiry" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,675,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding DrivingLicense.DateOfExpiry}" />
+
+            <Label
+                Width="200"
+                Height="30"
+                Margin="200,750,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Code 95 Date of Issue" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,750,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding Code95DateOfIssue}" />
+
+            <Label
+                Width="200"
+                Height="30"
+                Margin="200,825,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Code 95 Date of Expiry" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,825,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding Code95DateOfExpiry}" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,900,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Visa Number" />
+            <TextBox
+                Width="120"
+                Height="30"
+                Margin="370,900,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding Visa.VisaNumber}"
+                TextWrapping="Wrap" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,975,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Visa Date of Issue" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,975,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding Visa.DateOfIssue}" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,1050,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Visa Date of Expiry" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,1050,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding Visa.DateOfExpiry}" />
+
+            <Label
+                Width="200"
+                Height="30"
+                Margin="200,1125,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="TachoKard Date of Issue" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,1125,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding TachoKardDateOfIssue}" />
+
+            <Label
+                Width="200"
+                Height="30"
+                Margin="200,1200,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="TachoKard Date of Expiry" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,1200,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding TachoKardDateOfExpiry}" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,1250,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="" />
+        </Grid>
+    </ScrollViewer>
 </Page>

@@ -10,10 +10,101 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <Grid>
-        <Frame
-            x:Name="mainFrame"
-            JournalOwnership="OwnsJournal"
-            NavigationUIVisibility="Hidden" />
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Frame
+                x:Name="mainFrame"
+                JournalOwnership="OwnsJournal"
+                NavigationUIVisibility="Hidden" />
+            <Label
+                Width="60"
+                Height="30"
+                Margin="200,75,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Name" />
+            <TextBox
+                Width="120"
+                Height="30"
+                Margin="370,75,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding Name}"
+                TextWrapping="Wrap" />
+
+            <Label
+                Width="60"
+                Height="30"
+                Margin="200,150,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Number" />
+            <TextBox
+                Width="120"
+                Height="30"
+                Margin="370,150,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding Number}"
+                TextWrapping="Wrap" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Insurance Date of Issue" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding InsuranceDateOfIssue}" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,300,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Insurance Date of Expiry" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,300,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding InsuranceDateOfExpiry}" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,375,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Extinguisher Date of Expiry" />
+            <DatePicker
+                Width="120"
+                Height="30"
+                Margin="370,375,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                SelectedDate="{Binding ExtinguisherDateOfExpiry}" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,400,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="" />
+            <Label
+                Margin="0,23,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Content="Insert data to add a new trailer" />
+        </Grid>
+    </ScrollViewer>
 </Page>
