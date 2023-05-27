@@ -22,7 +22,7 @@ public class Context : DbContext
     {
         //Add-Migration InitalCreate
         //Update-Database
-        string connectionString = "Data Source=D:\\Projects\\databases for driver car\\databases for driver car\\database.db3";
+        string connectionString = "Data Source=database.db3";
         base.OnConfiguring(optionsBuilder);
         optionsBuilder.UseSqlite(connectionString);
         optionsBuilder.EnableSensitiveDataLogging();
