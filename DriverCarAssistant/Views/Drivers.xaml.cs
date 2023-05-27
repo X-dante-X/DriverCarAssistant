@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DriverCarAssistant
+namespace DriverCarAssistant.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Drivers.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Drivers : Page
     {
-        public MainWindow()
+        public Drivers()
         {
             InitializeComponent();
         }
