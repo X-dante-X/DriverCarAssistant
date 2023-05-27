@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace DriverCarAssistant.Views
 {
     /// <summary>
-    /// Interaction logic for Drivers.xaml
+    /// Interaction logic for InsertCar.xaml
     /// </summary>
-    public partial class Drivers : Page
+    public partial class InsertCar : Page
     {
-        public Drivers()
+        public InsertCar()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Page newPage = new InsertDriver();
-            NavigationService navigationService = NavigationService.GetNavigationService(this);
-            navigationService.Navigate(newPage);
         }
     }
 }

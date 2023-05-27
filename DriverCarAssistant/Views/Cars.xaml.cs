@@ -24,5 +24,12 @@ namespace DriverCarAssistant.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Page newPage = new InsertCar();
+            NavigationService navigationService = NavigationService.GetNavigationService(this);
+            navigationService.Navigate(newPage);
+        }
     }
 }
