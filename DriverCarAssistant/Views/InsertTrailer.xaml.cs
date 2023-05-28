@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DriverCarAssistant.DBContext;
+using DriverCarAssistant.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,24 @@ namespace DriverCarAssistant.Views
         public InsertTrailer()
         {
             InitializeComponent();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            var dataContext = DataContext as Driver;
+            using Context context = new Context();
+            Trailer trailer = new Trailer()
+            {
+                Name = ((TextBox)FindName("Name")).Text,
+                Nubmer = ((TextBox)FindName("Nubmer")).Text,
+                InsuranceDateOfIssue = ((DatePicker)FindName("InsuranceDateOfIssue")).SelectedDate ?? DateTime.MinValue,
+                InsuranceDateOfExpiry = ((DatePicker)FindName("InsuranceDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
+                ExtinguisherDateOfExpiry = ((DatePicker)FindName("ExtinguisherDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
+            };
+
+            context.Trailers.Add(trailer);
+
+            context.SaveChanges();
         }
     }
 }

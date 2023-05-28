@@ -23,6 +23,7 @@
                 VerticalAlignment="Top"
                 Content="Name" />
             <TextBox
+                Name="Name"
                 Width="120"
                 Height="30"
                 Margin="370,75,0,0"
@@ -39,6 +40,7 @@
                 VerticalAlignment="Top"
                 Content="Number" />
             <TextBox
+                Name="Number"
                 Width="120"
                 Height="30"
                 Margin="370,150,0,0"
@@ -55,6 +57,7 @@
                 VerticalAlignment="Top"
                 Content="License Date of Issue" />
             <DatePicker
+                Name="LicenseDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,225,0,0"
@@ -70,6 +73,7 @@
                 VerticalAlignment="Top"
                 Content="License Date of Expiry" />
             <DatePicker
+                Name="LicenseDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,300,0,0"
@@ -85,6 +89,7 @@
                 VerticalAlignment="Top"
                 Content="Maintenance Date of Issue" />
             <DatePicker
+                Name="MaintenanceDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,375,0,0"
@@ -100,6 +105,7 @@
                 VerticalAlignment="Top"
                 Content="Maintenance Date of Expiry" />
             <DatePicker
+                Name="MaintenanceDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,450,0,0"
@@ -115,6 +121,7 @@
                 VerticalAlignment="Top"
                 Content="Insurance Date of Issue" />
             <DatePicker
+                Name="InsuranceDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,525,0,0"
@@ -130,6 +137,7 @@
                 VerticalAlignment="Top"
                 Content="Insurance Date of Expiry" />
             <DatePicker
+                Name="InsuranceDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,600,0,0"
@@ -145,6 +153,7 @@
                 VerticalAlignment="Top"
                 Content="LPacket Date of Issue" />
             <DatePicker
+                Name="LPacketDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,675,0,0"
@@ -160,6 +169,7 @@
                 VerticalAlignment="Top"
                 Content="LPacket Date of Expiry" />
             <DatePicker
+                Name="LPacketDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,750,0,0"
@@ -175,6 +185,7 @@
                 VerticalAlignment="Top"
                 Content="Tacho Calibration Date of Issue" />
             <DatePicker
+                Name="TachoСalibrationDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,825,0,0"
@@ -190,6 +201,7 @@
                 VerticalAlignment="Top"
                 Content="Tacho Calibration Date of Expiry" />
             <DatePicker
+                Name="TachoСalibrationDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,900,0,0"
@@ -205,6 +217,7 @@
                 VerticalAlignment="Top"
                 Content="Extinguisher Date of Expiry" />
             <DatePicker
+                Name="ExtinguisherDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,975,0,0"
@@ -220,6 +233,7 @@
                 VerticalAlignment="Top"
                 Content="Service" />
             <TextBox
+                Name="Service"
                 Width="120"
                 Height="30"
                 Margin="370,1050,0,0"
@@ -234,7 +248,19 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="" />
-            <Label Content="Insert data to add a new car" HorizontalAlignment="Center" Margin="0,23,0,0" VerticalAlignment="Top"/>
+            <Label
+                Margin="0,23,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Content="Insert data to add a new car" />
+            <Button
+                Width="99"
+                Height="30"
+                Margin="579,1050,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click"
+                Content="Add" />
         </Grid>
     </ScrollViewer>
 </Page>

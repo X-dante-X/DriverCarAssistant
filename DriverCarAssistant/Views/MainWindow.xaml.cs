@@ -43,21 +43,5 @@ namespace DriverCarAssistant
             var page = new Trailers();
             mainFrame.Content = page;
         }
-
-        //public void InsertCar()
-        //{
-        //    var page = new InsertCar();
-        //    mainFrame.Content = page;
-        //}
-        //public void InsertDriver()
-        //{
-        //    var page = new InsertDriver();
-        //    mainFrame.Content = page;
-        //}
-        //public void InsertTrailer()
-        //{
-        //    var page = new InsertTrailer();
-        //    mainFrame.Content = page;
-        //}
     }
 }

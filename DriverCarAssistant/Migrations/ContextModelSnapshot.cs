@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using databases_for_driver_car.DBContext;
+using DriverCarAssistant.DBContext;
 
 #nullable disable
 

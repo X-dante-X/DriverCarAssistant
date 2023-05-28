@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace databases_for_driver_car.Models;
+namespace DriverCarAssistant.Models;
 
 public class Car
 {

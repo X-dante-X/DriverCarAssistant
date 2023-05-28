@@ -24,6 +24,7 @@
                 VerticalAlignment="Top"
                 Content="Name" />
             <TextBox
+                Name="Name"
                 Width="120"
                 Height="30"
                 Margin="370,75,0,0"
@@ -40,6 +41,7 @@
                 VerticalAlignment="Top"
                 Content="Number" />
             <TextBox
+                Name="Number"
                 Width="120"
                 Height="30"
                 Margin="370,150,0,0"
@@ -56,6 +58,7 @@
                 VerticalAlignment="Top"
                 Content="Insurance Date of Issue" />
             <DatePicker
+                Name="InsuranceDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,225,0,0"
@@ -71,6 +74,7 @@
                 VerticalAlignment="Top"
                 Content="Insurance Date of Expiry" />
             <DatePicker
+                Name="InsuranceDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,300,0,0"
@@ -86,6 +90,7 @@
                 VerticalAlignment="Top"
                 Content="Extinguisher Date of Expiry" />
             <DatePicker
+                Name="ExtinguisherDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,375,0,0"
@@ -105,6 +110,14 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Content="Insert data to add a new trailer" />
+            <Button
+                Width="99"
+                Height="30"
+                Margin="579,400,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click"
+                Content="Add" />
         </Grid>
     </ScrollViewer>
 </Page>

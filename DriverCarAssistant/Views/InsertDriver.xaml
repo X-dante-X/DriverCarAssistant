@@ -29,6 +29,7 @@
                 VerticalAlignment="Top"
                 Content="PESEL" />
             <TextBox
+                Name="PESEL"
                 Width="120"
                 Height="30"
                 Margin="370,75,0,0"
@@ -45,6 +46,7 @@
                 VerticalAlignment="Top"
                 Content="First name" />
             <TextBox
+                Name="FirstName"
                 Width="120"
                 Height="30"
                 Margin="370,150,0,0"
@@ -61,6 +63,7 @@
                 VerticalAlignment="Top"
                 Content="Second name" />
             <TextBox
+                Name="SecondName"
                 Width="120"
                 Height="30"
                 Margin="370,225,0,0"
@@ -77,6 +80,7 @@
                 VerticalAlignment="Top"
                 Content="Passport Number" />
             <TextBox
+                Name="PassportNumber"
                 Width="120"
                 Height="30"
                 Margin="370,300,0,0"
@@ -93,6 +97,7 @@
                 VerticalAlignment="Top"
                 Content="Passport Date of Birth" />
             <DatePicker
+                Name="PassportDateOfBirth"
                 Width="120"
                 Height="30"
                 Margin="370,375,0,0"
@@ -108,6 +113,7 @@
                 VerticalAlignment="Top"
                 Content="Passport Date of Issue" />
             <DatePicker
+                Name="PassportDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,450,0,0"
@@ -123,6 +129,7 @@
                 VerticalAlignment="Top"
                 Content="Passport Date of Expiry" />
             <DatePicker
+                Name="PassportDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,525,0,0"
@@ -138,6 +145,7 @@
                 VerticalAlignment="Top"
                 Content="Driving License Date of Issue" />
             <DatePicker
+                Name="DrivingLicenseDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,600,0,0"
@@ -153,6 +161,7 @@
                 VerticalAlignment="Top"
                 Content="Driving License Date of Expiry" />
             <DatePicker
+                Name="DrivingLicenseDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,675,0,0"
@@ -168,6 +177,7 @@
                 VerticalAlignment="Top"
                 Content="Code 95 Date of Issue" />
             <DatePicker
+                Name="Code95DateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,750,0,0"
@@ -183,6 +193,7 @@
                 VerticalAlignment="Top"
                 Content="Code 95 Date of Expiry" />
             <DatePicker
+                Name="Code95DateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,825,0,0"
@@ -198,6 +209,7 @@
                 VerticalAlignment="Top"
                 Content="Visa Number" />
             <TextBox
+                Name="VisaNumber"
                 Width="120"
                 Height="30"
                 Margin="370,900,0,0"
@@ -214,6 +226,7 @@
                 VerticalAlignment="Top"
                 Content="Visa Date of Issue" />
             <DatePicker
+                Name="VisaDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,975,0,0"
@@ -229,6 +242,7 @@
                 VerticalAlignment="Top"
                 Content="Visa Date of Expiry" />
             <DatePicker
+                Name="VisaDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,1050,0,0"
@@ -244,6 +258,7 @@
                 VerticalAlignment="Top"
                 Content="TachoKard Date of Issue" />
             <DatePicker
+                Name="TachoKardDateOfIssue"
                 Width="120"
                 Height="30"
                 Margin="370,1125,0,0"
@@ -259,6 +274,7 @@
                 VerticalAlignment="Top"
                 Content="TachoKard Date of Expiry" />
             <DatePicker
+                Name="TachoKardDateOfExpiry"
                 Width="120"
                 Height="30"
                 Margin="370,1200,0,0"
@@ -273,6 +289,14 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="" />
+            <Button
+                Width="99"
+                Height="30"
+                Margin="579,1200,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click"
+                Content="Add" />
         </Grid>
     </ScrollViewer>
 </Page>
