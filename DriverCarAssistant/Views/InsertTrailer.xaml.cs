@@ -43,6 +43,9 @@ namespace DriverCarAssistant.Views
             context.Trailers.Add(trailer);
 
             context.SaveChanges();
+            Page newPage = new Trailers();
+            NavigationService navigationService = NavigationService.GetNavigationService(this);
+            navigationService.Navigate(newPage);
         }
     }
 }

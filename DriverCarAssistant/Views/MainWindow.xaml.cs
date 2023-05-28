@@ -24,6 +24,8 @@ namespace DriverCarAssistant
         public MainWindow()
         {
             InitializeComponent();
+            var page = new Drivers();
+            mainFrame.Content = page;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

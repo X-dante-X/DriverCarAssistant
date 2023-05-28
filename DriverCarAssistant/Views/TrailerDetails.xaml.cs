@@ -1,4 +1,5 @@
-﻿using DriverCarAssistant.Models;
+﻿using DriverCarAssistant.DBContext;
+using DriverCarAssistant.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,14 +23,25 @@ namespace DriverCarAssistant.Views
     /// </summary>
     public partial class TrailerDetails : Page
     {
+        private Trailer Trailer;
         public TrailerDetails(Trailer trailer)
         {
+            Trailer = trailer;
             InitializeComponent();
             ((Label)FindName("Name")).Content = ((Label)FindName("Name")).Content + ": " + trailer.Name;
             ((Label)FindName("Number")).Content = ((Label)FindName("Number")).Content + ": " + trailer.Nubmer;
-            ((Label)FindName("InsuranceDateOfIssue")).Content = ((Label)FindName("InsuranceDateOfIssue")).Content + ": " + trailer.InsuranceDateOfIssue;
-            ((Label)FindName("InsuranceDateOfExpiry")).Content = ((Label)FindName("InsuranceDateOfExpiry")).Content + ": " + trailer.InsuranceDateOfExpiry;
-            ((Label)FindName("ExtinguisherDateOfExpiry")).Content = ((Label)FindName("ExtinguisherDateOfExpiry")).Content + ": " + trailer.ExtinguisherDateOfExpiry;
+            ((Label)FindName("InsuranceDateOfIssue")).Content = ((Label)FindName("InsuranceDateOfIssue")).Content + ": " + trailer.InsuranceDateOfIssue.ToShortDateString;
+            ((Label)FindName("InsuranceDateOfExpiry")).Content = ((Label)FindName("InsuranceDateOfExpiry")).Content + ": " + trailer.InsuranceDateOfExpiry.ToShortDateString;
+            ((Label)FindName("ExtinguisherDateOfExpiry")).Content = ((Label)FindName("ExtinguisherDateOfExpiry")).Content + ": " + trailer.ExtinguisherDateOfExpiry.ToShortDateString;
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            using Context context = new Context();
+            context.Trailers.Remove(Trailer);
+            context.SaveChanges();
+            Page newPage = new Trailers();
+            NavigationService navigationService = NavigationService.GetNavigationService(this);
+            navigationService.Navigate(newPage);
         }
     }
 }

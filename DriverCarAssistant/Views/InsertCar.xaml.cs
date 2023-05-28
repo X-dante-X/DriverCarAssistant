@@ -29,7 +29,6 @@ namespace DriverCarAssistant.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            var dataContext = DataContext as Driver;
             using Context context = new Context();
             Car car = new Car()
             {

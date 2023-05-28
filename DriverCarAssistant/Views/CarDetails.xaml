@@ -17,7 +17,7 @@
                 NavigationUIVisibility="Hidden" />
             <Label
                 Name="Name"
-                Width="60"
+                Width="300"
                 Height="30"
                 Margin="200,75,0,0"
                 HorizontalAlignment="Left"
@@ -25,7 +25,7 @@
                 Content="Name" />
             <Label
                 Name="Number"
-                Width="60"
+                Width="300"
                 Height="30"
                 Margin="200,150,0,0"
                 HorizontalAlignment="Left"
@@ -34,7 +34,7 @@
 
             <Label
                 Name="LicenseDateOfIssue"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,225,0,0"
                 HorizontalAlignment="Left"
@@ -44,7 +44,7 @@
 
             <Label
                 Name="LicenseDateOfExpiry"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,300,0,0"
                 HorizontalAlignment="Left"
@@ -54,7 +54,7 @@
 
             <Label
                 Name="MaintenanceDateOfIssue"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,375,0,0"
                 HorizontalAlignment="Left"
@@ -64,7 +64,7 @@
 
             <Label
                 Name="MaintenanceDateOfExpiry"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,450,0,0"
                 HorizontalAlignment="Left"
@@ -73,7 +73,7 @@
 
             <Label
                 Name="InsuranceDateOfIssue"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,525,0,0"
                 HorizontalAlignment="Left"
@@ -83,7 +83,7 @@
 
             <Label
                 Name="InsuranceDateOfExpiry"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,600,0,0"
                 HorizontalAlignment="Left"
@@ -92,7 +92,7 @@
 
             <Label
                 Name="LPacketDateOfIssue"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,675,0,0"
                 HorizontalAlignment="Left"
@@ -102,7 +102,7 @@
 
             <Label
                 Name="LPacketDateOfExpiry"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,750,0,0"
                 HorizontalAlignment="Left"
@@ -112,7 +112,7 @@
 
             <Label
                 Name="TachoСalibrationDateOfIssue"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,825,0,0"
                 HorizontalAlignment="Left"
@@ -121,7 +121,7 @@
 
             <Label
                 Name="TachoСalibrationDateOfExpiry"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,900,0,0"
                 HorizontalAlignment="Left"
@@ -130,7 +130,7 @@
 
             <Label
                 Name="ExtinguisherDateOfExpiry"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,975,0,0"
                 HorizontalAlignment="Left"
@@ -140,7 +140,7 @@
 
             <Label
                 Name="Service"
-                Width="150"
+                Width="300"
                 Height="30"
                 Margin="200,1050,0,0"
                 HorizontalAlignment="Left"
@@ -154,6 +154,12 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="" />
+            <Button
+                Margin="580,80,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click"
+                Content="Delete this car" />
         </Grid>
     </ScrollViewer>
 </Page>

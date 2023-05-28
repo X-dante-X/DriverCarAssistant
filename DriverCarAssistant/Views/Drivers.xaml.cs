@@ -1,5 +1,6 @@
 ﻿using DriverCarAssistant.DBContext;
 using DriverCarAssistant.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,35 +27,11 @@ namespace DriverCarAssistant.Views
         {
             InitializeComponent();
             using Context context = new Context();
-            var drivers = from driver in context.Drivers
-                          select new Driver()
-                          {
-                              PESEL = driver.PESEL,
-                              FirstName = driver.FirstName,
-                              SecondName = driver.SecondName,
-                              Passport = new Passport()
-                              {
-                                  PassportNumber = driver.Passport.PassportNumber,
-                                  DateOfBirth = driver.Passport.DateOfBirth,
-                                  DateOfIssue = driver.Passport.DateOfIssue,
-                                  DateOfExpiry = driver.Passport.DateOfExpiry
-                              },
-                              DrivingLicense = new DrivingLicense()
-                              {
-                                  DateOfIssue = driver.DrivingLicense.DateOfIssue,
-                                  DateOfExpiry = driver.DrivingLicense.DateOfExpiry
-                              },
-                              Code95DateOfIssue = driver.Code95DateOfIssue,
-                              Code95DateOfExpiry = driver.Code95DateOfExpiry,
-                              Visa = new Visa()
-                              {
-                                  VisaNumber = driver.Visa.VisaNumber,
-                                  DateOfIssue = driver.Visa.DateOfIssue,
-                                  DateOfExpiry = driver.Visa.DateOfExpiry
-                              },
-                              TachoKardDateOfIssue = driver.TachoKardDateOfIssue,
-                              TachoKardDateOfExpiry = driver.TachoKardDateOfExpiry
-                          };
+            var drivers = context.Drivers.Include(d => d.Passport)
+                            .Include(d => d.DrivingLicense)
+                            .Include(d => d.Visa)
+                            .ToList();
+
             foreach (var driver in drivers)
             {
                 Button button = new Button();

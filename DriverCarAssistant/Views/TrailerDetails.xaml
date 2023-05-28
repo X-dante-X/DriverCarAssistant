@@ -18,7 +18,7 @@
                 NavigationUIVisibility="Hidden" />
             <Label
                 Name="Name"
-                Width="60"
+                Width="300"
                 Height="30"
                 Margin="200,75,0,0"
                 HorizontalAlignment="Left"
@@ -26,7 +26,7 @@
                 Content="Name" />
             <Label
                 Name="Number"
-                Width="60"
+                Width="300"
                 Height="30"
                 Margin="200,150,0,0"
                 HorizontalAlignment="Left"
@@ -35,43 +35,45 @@
 
             <Label
                 Name="InsuranceDateOfIssue"
-                Width="150"
+                Width="300"
                 Height="30"
-                Margin="200,525,0,0"
+                Margin="200,225,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Insurance Date of Issue" />
 
             <Label
                 Name="InsuranceDateOfExpiry"
-                Width="150"
+                Width="300"
                 Height="30"
-                Margin="200,600,0,0"
+                Margin="200,300,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Insurance Date of Expiry" />
 
 
-
             <Label
                 Name="ExtinguisherDateOfExpiry"
-                Width="150"
+                Width="300"
                 Height="30"
-                Margin="200,975,0,0"
+                Margin="200,375,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Extinguisher Date of Expiry" />
 
-
-
-
             <Label
-                Width="150"
+                Width="300"
                 Height="30"
-                Margin="200,1100,0,0"
+                Margin="200,450,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="" />
+            <Button
+                Margin="580,80,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click"
+                Content="Delete this trailer" />
         </Grid>
     </ScrollViewer>
 </Page>

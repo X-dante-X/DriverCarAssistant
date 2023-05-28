@@ -175,6 +175,12 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="" />
+            <Button
+                Margin="580,80,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click"
+                Content="Delete this driver" />
         </Grid>
     </ScrollViewer>
 </Page>

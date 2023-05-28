@@ -178,9 +178,9 @@
                 SelectedDate="{Binding LPacketDateOfExpiry}" />
 
             <Label
-                Width="150"
+                Width="200"
                 Height="30"
-                Margin="200,825,0,0"
+                Margin="150,825,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Tacho Calibration Date of Issue" />
@@ -194,9 +194,9 @@
                 SelectedDate="{Binding TachoСalibrationDateOfIssue}" />
 
             <Label
-                Width="150"
+                Width="200"
                 Height="30"
-                Margin="200,900,0,0"
+                Margin="150,900,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Tacho Calibration Date of Expiry" />
