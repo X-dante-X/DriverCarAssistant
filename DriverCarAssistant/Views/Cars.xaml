@@ -9,18 +9,28 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid>
-        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" JournalOwnership="OwnsJournal"/>
-        <Label
-            Margin="0,50,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Content="Cars" />
-        <Button
-            Margin="692,35,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Click="Button_Click"
-            Content="Add New Car" />
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Frame
+                x:Name="mainFrame"
+                JournalOwnership="OwnsJournal"
+                NavigationUIVisibility="Hidden" />
+            <Label
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Content="Cars" />
+            <Button
+                Margin="692,35,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click"
+                Content="Add New Car" />
+
+            <StackPanel
+                x:Name="ButtonContainer"
+                Margin="0,75,0,0"
+                Orientation="Vertical" />
+        </Grid>
+    </ScrollViewer>
 </Page>

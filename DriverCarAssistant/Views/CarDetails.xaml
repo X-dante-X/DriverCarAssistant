@@ -1,0 +1,159 @@
+﻿<Page
+    x:Class="DriverCarAssistant.Views.CarDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DriverCarAssistant.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="CarDetails"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Frame
+                x:Name="mainFrame"
+                JournalOwnership="OwnsJournal"
+                NavigationUIVisibility="Hidden" />
+            <Label
+                Name="Name"
+                Width="60"
+                Height="30"
+                Margin="200,75,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Name" />
+            <Label
+                Name="Number"
+                Width="60"
+                Height="30"
+                Margin="200,150,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Number" />
+
+            <Label
+                Name="LicenseDateOfIssue"
+                Width="150"
+                Height="30"
+                Margin="200,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="License Date of Issue" />
+
+
+            <Label
+                Name="LicenseDateOfExpiry"
+                Width="150"
+                Height="30"
+                Margin="200,300,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="License Date of Expiry" />
+
+
+            <Label
+                Name="MaintenanceDateOfIssue"
+                Width="150"
+                Height="30"
+                Margin="200,375,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Maintenance Date of Issue" />
+
+
+            <Label
+                Name="MaintenanceDateOfExpiry"
+                Width="150"
+                Height="30"
+                Margin="200,450,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Maintenance Date of Expiry" />
+
+            <Label
+                Name="InsuranceDateOfIssue"
+                Width="150"
+                Height="30"
+                Margin="200,525,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Insurance Date of Issue" />
+
+
+            <Label
+                Name="InsuranceDateOfExpiry"
+                Width="150"
+                Height="30"
+                Margin="200,600,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Insurance Date of Expiry" />
+
+            <Label
+                Name="LPacketDateOfIssue"
+                Width="150"
+                Height="30"
+                Margin="200,675,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="LPacket Date of Issue" />
+
+
+            <Label
+                Name="LPacketDateOfExpiry"
+                Width="150"
+                Height="30"
+                Margin="200,750,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="LPacket Date of Expiry" />
+
+
+            <Label
+                Name="TachoСalibrationDateOfIssue"
+                Width="150"
+                Height="30"
+                Margin="200,825,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Tacho Calibration Date of Issue" />
+
+            <Label
+                Name="TachoСalibrationDateOfExpiry"
+                Width="150"
+                Height="30"
+                Margin="200,900,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Tacho Calibration Date of Expiry" />
+
+            <Label
+                Name="ExtinguisherDateOfExpiry"
+                Width="150"
+                Height="30"
+                Margin="200,975,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Extinguisher Date of Expiry" />
+
+
+            <Label
+                Name="Service"
+                Width="150"
+                Height="30"
+                Margin="200,1050,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Service" />
+
+            <Label
+                Width="150"
+                Height="30"
+                Margin="200,1100,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="" />
+        </Grid>
+    </ScrollViewer>
+</Page>

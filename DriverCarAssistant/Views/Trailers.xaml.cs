@@ -1,6 +1,9 @@
-﻿using System;
+﻿using DriverCarAssistant.DBContext;
+using DriverCarAssistant.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +26,17 @@ namespace DriverCarAssistant.Views
         public Trailers()
         {
             InitializeComponent();
+            using Context context = new Context();
+            var trailers = from Trailer in context.Trailers
+                       select Trailer;
+            foreach (var trailer in trailers)
+            {
+                Button button = new Button();
+                button.Content = trailer.Nubmer;
+                button.Click += (sender, e) => ShowTrailerDetails(trailer);
+
+                ButtonContainer.Children.Add(button);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -30,6 +44,11 @@ namespace DriverCarAssistant.Views
             Page newPage = new InsertTrailer();
             NavigationService navigationService = NavigationService.GetNavigationService(this);
             navigationService.Navigate(newPage);
+        }
+        private void ShowTrailerDetails(Trailer trailer)
+        {
+            TrailerDetails detailsPage = new TrailerDetails(trailer);
+            NavigationService.Navigate(detailsPage);
         }
     }
 }

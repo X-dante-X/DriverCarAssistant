@@ -34,7 +34,7 @@ namespace DriverCarAssistant.Views
             Trailer trailer = new Trailer()
             {
                 Name = ((TextBox)FindName("Name")).Text,
-                Nubmer = ((TextBox)FindName("Nubmer")).Text,
+                Nubmer = ((TextBox)FindName("Number")).Text,
                 InsuranceDateOfIssue = ((DatePicker)FindName("InsuranceDateOfIssue")).SelectedDate ?? DateTime.MinValue,
                 InsuranceDateOfExpiry = ((DatePicker)FindName("InsuranceDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
                 ExtinguisherDateOfExpiry = ((DatePicker)FindName("ExtinguisherDateOfExpiry")).SelectedDate ?? DateTime.MinValue,

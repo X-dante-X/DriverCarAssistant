@@ -34,7 +34,7 @@ namespace DriverCarAssistant.Views
             Car car = new Car()
             {
                 Name = ((TextBox)FindName("Name")).Text,
-                Nubmer = ((TextBox)FindName("Nubmer")).Text,
+                Nubmer = ((TextBox)FindName("Number")).Text,
                 LicenseDateOfIssue = ((DatePicker)FindName("LicenseDateOfIssue")).SelectedDate ?? DateTime.MinValue,
                 LicenseDateOfExpiry = ((DatePicker)FindName("LicenseDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
                 MaintenanceDateOfIssue = ((DatePicker)FindName("MaintenanceDateOfIssue")).SelectedDate ?? DateTime.MinValue,    
@@ -52,6 +52,9 @@ namespace DriverCarAssistant.Views
             context.Cars.Add(car);
 
             context.SaveChanges();
+            Page newPage = new Cars();
+            NavigationService navigationService = NavigationService.GetNavigationService(this);
+            navigationService.Navigate(newPage);
         }
     }
 }

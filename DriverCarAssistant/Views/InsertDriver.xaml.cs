@@ -65,6 +65,9 @@ namespace DriverCarAssistant.Views
             context.Drivers.Add(driver);
 
             context.SaveChanges();
+            Page newPage = new Drivers();
+            NavigationService navigationService = NavigationService.GetNavigationService(this);
+            navigationService.Navigate(newPage);
         }
     }
 }
