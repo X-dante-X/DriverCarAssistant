@@ -35,6 +35,7 @@
                 Margin="370,75,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
+                PreviewTextInput="TextBox_PreviewTextInput"
                 Text="{Binding PESEL}"
                 TextWrapping="Wrap" />
 

@@ -239,6 +239,7 @@
                 Margin="370,1050,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
+                PreviewTextInput="TextBox_PreviewTextInput"
                 Text="{Binding Service}"
                 TextWrapping="Wrap" />
             <Label

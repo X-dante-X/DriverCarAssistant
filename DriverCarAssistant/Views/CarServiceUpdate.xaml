@@ -28,7 +28,7 @@
             Margin="435,178,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            TextChanged="TextBox_TextChanged"
+            PreviewTextInput="TextBox_PreviewTextInput"
             TextWrapping="Wrap" />
 
     </Grid>

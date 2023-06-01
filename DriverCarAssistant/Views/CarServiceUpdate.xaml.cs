@@ -39,5 +39,16 @@ namespace DriverCarAssistant.Views
             navigationService.Navigate(newPage);
         }
 
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            foreach (var ch in e.Text)
+            {
+                if (!Char.IsDigit(ch))
+                {
+                    e.Handled = true;
+                    break;
+                }
+            }
+        }
     }
 }
