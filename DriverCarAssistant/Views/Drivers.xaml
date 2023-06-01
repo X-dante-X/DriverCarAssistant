@@ -9,26 +9,58 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="AddCarButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#30302F" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid>
-            <Frame
-                x:Name="mainFrame"
-                JournalOwnership="OwnsJournal"
-                NavigationUIVisibility="Hidden" />
+        <Grid Background="#202020">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
             <Label
-                Margin="0,50,0,0"
+                Margin="10,10,10,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Content="Drivers" />
+                Content="Drivers"
+                FontSize="24"
+                FontWeight="Bold"
+                Foreground="White" />
+
             <Button
-                Margin="692,35,0,0"
-                HorizontalAlignment="Left"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Add New Driver" />
+                Content="Add New Driver"
+                Style="{StaticResource AddCarButtonStyle}" />
+
             <StackPanel
                 x:Name="ButtonContainer"
-                Margin="0,75,0,0"
+                Grid.Row="1"
+                Margin="10"
                 Orientation="Vertical" />
         </Grid>
     </ScrollViewer>
