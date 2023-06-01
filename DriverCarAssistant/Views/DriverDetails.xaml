@@ -191,13 +191,13 @@
                 Margin="560,640,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Click="Button_Click_Driving"
+                Click="Button_Click_DrivingLicense"
                 Content="Add new Driving License" />
             <Button
                 Margin="578,790,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Click="Button_Click_Code"
+                Click="Button_Click_Code95"
                 Content="Add new Code 95" />
             <Button
                 Margin="589,975,0,0"
@@ -209,7 +209,7 @@
                 Margin="571,1165,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Click="Button_Click_Tacho"
+                Click="Button_Click_TachoKard"
                 Content="Add new Tacho Kard" />
         </Grid>
     </ScrollViewer>

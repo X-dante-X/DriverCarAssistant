@@ -65,26 +65,31 @@ namespace DriverCarAssistant.Views
 
         private void Button_Click_Passport(object sender, RoutedEventArgs e)
         {
-
+            DriverPassportUpdate Page = new DriverPassportUpdate(Driver);
+            NavigationService.Navigate(Page);
         }
-        private void Button_Click_Driving(object sender, RoutedEventArgs e)
+        private void Button_Click_DrivingLicense(object sender, RoutedEventArgs e)
         {
-
+            DriverDrivingLicenseUpdate Page = new DriverDrivingLicenseUpdate(Driver);
+            NavigationService.Navigate(Page);
         }
 
-        private void Button_Click_Code(object sender, RoutedEventArgs e)
+        private void Button_Click_Code95(object sender, RoutedEventArgs e)
         {
-
+            DriverCode95Update Page = new DriverCode95Update(Driver);
+            NavigationService.Navigate(Page);
         }
 
         private void Button_Click_Visa(object sender, RoutedEventArgs e)
         {
-
+            DriverVisaUpdate Page = new DriverVisaUpdate(Driver);
+            NavigationService.Navigate(Page);
         }
 
-        private void Button_Click_Tacho(object sender, RoutedEventArgs e)
+        private void Button_Click_TachoKard(object sender, RoutedEventArgs e)
         {
-
+            DriverTachoKardUpdate Page = new DriverTachoKardUpdate(Driver);
+            NavigationService.Navigate(Page);
         }
     }
 }
