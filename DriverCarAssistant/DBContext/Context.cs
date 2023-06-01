@@ -1,9 +1,14 @@
 ﻿using DriverCarAssistant.Models;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace DriverCarAssistant.DBContext;
@@ -22,7 +27,11 @@ public class Context : DbContext
     {
         //Add-Migration InitalCreate
         //Update-Database
-        string connectionString = "Data Source=D:\\Projects\\DriverCarAssistant\\DriverCarAssistant\\database.db3";
+        string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        string dbFilePath = Path.Combine(currentDirectory, "database.db3");
+        SqliteConnectionStringBuilder builder = new SqliteConnectionStringBuilder();
+        builder.DataSource = dbFilePath;
+        string connectionString = builder.ConnectionString;
         base.OnConfiguring(optionsBuilder);
         optionsBuilder.UseSqlite(connectionString);
         optionsBuilder.EnableSensitiveDataLogging();

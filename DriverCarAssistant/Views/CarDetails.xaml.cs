@@ -37,9 +37,9 @@ namespace DriverCarAssistant.Views
             ((Label)FindName("InsuranceDateOfExpiry")).Content = ((Label)FindName("InsuranceDateOfExpiry")).Content + ": " + car.InsuranceDateOfExpiry.ToShortDateString();
             ((Label)FindName("LPacketDateOfIssue")).Content = ((Label)FindName("LPacketDateOfIssue")).Content + ": " + car.LPacketDateOfIssue.ToShortDateString();
             ((Label)FindName("LPacketDateOfExpiry")).Content = ((Label)FindName("LPacketDateOfExpiry")).Content + ": " + car.LPacketDateOfExpiry.ToShortDateString();
-            ((Label)FindName("TachoСalibrationDateOfIssue")).Content = ((Label)FindName("TachoСalibrationDateOfIssue")).Content + ": " + car.TachoСalibrationDateOfIssue.ToShortDateString;
-            ((Label)FindName("TachoСalibrationDateOfExpiry")).Content = ((Label)FindName("TachoСalibrationDateOfExpiry")).Content + ": " + car.TachoСalibrationDateOfExpiry.ToShortDateString;
-            ((Label)FindName("ExtinguisherDateOfExpiry")).Content = ((Label)FindName("ExtinguisherDateOfExpiry")).Content + ": " + car.ExtinguisherDateOfExpiry.ToShortDateString;
+            ((Label)FindName("TachoСalibrationDateOfIssue")).Content = ((Label)FindName("TachoСalibrationDateOfIssue")).Content + ": " + car.TachoСalibrationDateOfIssue.ToShortDateString();
+            ((Label)FindName("TachoСalibrationDateOfExpiry")).Content = ((Label)FindName("TachoСalibrationDateOfExpiry")).Content + ": " + car.TachoСalibrationDateOfExpiry.ToShortDateString();
+            ((Label)FindName("ExtinguisherDateOfExpiry")).Content = ((Label)FindName("ExtinguisherDateOfExpiry")).Content + ": " + car.ExtinguisherDateOfExpiry.ToShortDateString();
             ((Label)FindName("Service")).Content = ((Label)FindName("Service")).Content + ": " +car.Service+" km";
         }
 
@@ -51,6 +51,35 @@ namespace DriverCarAssistant.Views
             Page newPage = new Cars();
             NavigationService navigationService = NavigationService.GetNavigationService(this);
             navigationService.Navigate(newPage);
+        }
+
+        private void Button_Click_License(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Button_Click_Maintenance(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Button_Click_Insurance(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Button_Click_LPacket(object sender, RoutedEventArgs e)
+        {
+
+        }        
+        private void Button_Click_Tacho(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Button_Click_Extinguisher(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Button_Click_Service(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

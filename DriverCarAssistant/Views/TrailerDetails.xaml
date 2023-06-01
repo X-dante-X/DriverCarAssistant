@@ -10,7 +10,7 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <ScrollViewer Margin="0,0,0,-180" VerticalScrollBarVisibility="Auto">
         <Grid>
             <Frame
                 x:Name="mainFrame"
@@ -74,6 +74,18 @@
                 VerticalAlignment="Top"
                 Click="Button_Click"
                 Content="Delete this trailer" />
+            <Button
+                Margin="575,255,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click_Insurance"
+                Content="Add new Insurance" />
+            <Button
+                Margin="569,380,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="Button_Click_Extinguisher"
+                Content="Add new Extinguisher" />
         </Grid>
     </ScrollViewer>
 </Page>

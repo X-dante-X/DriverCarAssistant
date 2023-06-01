@@ -43,5 +43,15 @@ namespace DriverCarAssistant.Views
             NavigationService navigationService = NavigationService.GetNavigationService(this);
             navigationService.Navigate(newPage);
         }
+
+        private void Button_Click_Insurance(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_Extinguisher(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
