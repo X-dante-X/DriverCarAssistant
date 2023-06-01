@@ -46,12 +46,14 @@ namespace DriverCarAssistant.Views
 
         private void Button_Click_Insurance(object sender, RoutedEventArgs e)
         {
-
+            TrailerInsuranceUpdate Page = new TrailerInsuranceUpdate(Trailer);
+            NavigationService.Navigate(Page);
         }
 
         private void Button_Click_Extinguisher(object sender, RoutedEventArgs e)
         {
-
+            TrailerExtinguisherUpdate Page = new TrailerExtinguisherUpdate(Trailer);
+            NavigationService.Navigate(Page);
         }
     }
 }

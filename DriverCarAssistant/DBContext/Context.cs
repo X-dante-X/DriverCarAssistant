@@ -1,8 +1,6 @@
 ﻿using DriverCarAssistant.Models;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;

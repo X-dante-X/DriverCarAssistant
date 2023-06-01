@@ -3,6 +3,7 @@ using DriverCarAssistant.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,7 +31,7 @@ namespace DriverCarAssistant.Views
             ((Label)FindName("Name")).Content = ((Label)FindName("Name")).Content+": "+car.Name;
             ((Label)FindName("Number")).Content = ((Label)FindName("Number")).Content + ": " + car.Nubmer;
             ((Label)FindName("LicenseDateOfIssue")).Content = ((Label)FindName("LicenseDateOfIssue")).Content + ": " +car.LicenseDateOfIssue.ToShortDateString();
-            ((Label)FindName("LicenseDateOfExpiry")).Content = ((Label)FindName("LicenseDateOfExpiry")).Content + ": " + car.LicenseDateOfIssue.ToShortDateString();
+            ((Label)FindName("LicenseDateOfExpiry")).Content = ((Label)FindName("LicenseDateOfExpiry")).Content + ": " + car.LicenseDateOfExpiry.ToShortDateString();
             ((Label)FindName("MaintenanceDateOfIssue")).Content = ((Label)FindName("MaintenanceDateOfIssue")).Content + ": " + car.MaintenanceDateOfIssue.ToShortDateString();
             ((Label)FindName("MaintenanceDateOfExpiry")).Content = ((Label)FindName("MaintenanceDateOfExpiry")).Content + ": " + car.MaintenanceDateOfExpiry.ToShortDateString();
             ((Label)FindName("InsuranceDateOfIssue")).Content = ((Label)FindName("InsuranceDateOfIssue")).Content + ": " + car.InsuranceDateOfIssue.ToShortDateString();
@@ -55,31 +56,38 @@ namespace DriverCarAssistant.Views
 
         private void Button_Click_License(object sender, RoutedEventArgs e)
         {
-
+            CarLicenseUpdate Page = new CarLicenseUpdate(Car);
+            NavigationService.Navigate(Page);
         }
         private void Button_Click_Maintenance(object sender, RoutedEventArgs e)
         {
-
+            CarMaintenanceUpdate Page = new CarMaintenanceUpdate(Car);
+            NavigationService.Navigate(Page);
         }
         private void Button_Click_Insurance(object sender, RoutedEventArgs e)
         {
-
+            CarInsuranceUpdate Page = new CarInsuranceUpdate(Car);
+            NavigationService.Navigate(Page);
         }
         private void Button_Click_LPacket(object sender, RoutedEventArgs e)
         {
-
+            CarLPacketUpdate Page = new CarLPacketUpdate(Car);
+            NavigationService.Navigate(Page);
         }        
         private void Button_Click_Tacho(object sender, RoutedEventArgs e)
         {
-
+            CarTachoUpdate Page = new CarTachoUpdate(Car);
+            NavigationService.Navigate(Page);
         }
         private void Button_Click_Extinguisher(object sender, RoutedEventArgs e)
         {
-
+            CarExtinguisherUpdate Page = new CarExtinguisherUpdate(Car);
+            NavigationService.Navigate(Page);
         }
         private void Button_Click_Service(object sender, RoutedEventArgs e)
         {
-
+            CarServiceUpdate Page = new CarServiceUpdate(Car);
+            NavigationService.Navigate(Page);
         }
     }
 }
