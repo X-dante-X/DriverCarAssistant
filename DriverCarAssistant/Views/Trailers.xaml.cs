@@ -34,7 +34,7 @@ namespace DriverCarAssistant.Views
                 Button button = new Button();
                 button.Content = trailer.Nubmer;
                 button.Click += (sender, e) => ShowTrailerDetails(trailer);
-
+                button.Style = FindResource("AddTrailerButtonStyle") as Style;
                 ButtonContainer.Children.Add(button);
             }
         }

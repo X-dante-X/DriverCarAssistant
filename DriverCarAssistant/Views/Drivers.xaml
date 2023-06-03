@@ -10,32 +10,38 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
     <Page.Resources>
-        <Style x:Key="AddCarButtonStyle" TargetType="Button">
+        <Style x:Key="AddDriverButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#30302F" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Padding" Value="10" />
+            <Setter Property="Padding" Value="15" />
             <Setter Property="Margin" Value="10" />
-            <Setter Property="HorizontalAlignment" Value="Left" />
-            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border
+                            x:Name="ButtonBorder"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="8">
+                            CornerRadius="5">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#505050" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
     </Page.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid Background="#202020">
+        <Grid Background="#252525">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
@@ -49,13 +55,16 @@
                 FontWeight="Bold"
                 Foreground="White" />
 
-            <Button
-                Margin="10,10,10,0"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Click="Button_Click"
-                Content="Add New Driver"
-                Style="{StaticResource AddCarButtonStyle}" />
+            <Grid Grid.Row="0" HorizontalAlignment="Right">
+                <Button
+                    Width="150"
+                    Height="32"
+                    Margin="0,0,10,0"
+                    Padding="15"
+                    Click="Button_Click"
+                    Content="Add New Driver"
+                    Style="{StaticResource AddDriverButtonStyle}" />
+            </Grid>
 
             <StackPanel
                 x:Name="ButtonContainer"

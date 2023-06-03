@@ -38,7 +38,7 @@ namespace DriverCarAssistant.Views
                 string text = $"{driver.FirstName} {driver.SecondName}";
                 button.Content = text;
                 button.Click += (sender, e) => ShowDriverDetails(driver);
-
+                button.Style = FindResource("AddDriverButtonStyle") as Style;
                 ButtonContainer.Children.Add(button);
             }
         }

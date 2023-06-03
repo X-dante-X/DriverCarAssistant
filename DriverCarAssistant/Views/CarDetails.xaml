@@ -9,199 +9,147 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="210" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Margin" Value="15" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Background" Value="#30302F" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="ButtonBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#505050" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid>
-            <Frame
-                x:Name="mainFrame"
-                JournalOwnership="OwnsJournal"
-                NavigationUIVisibility="Hidden" />
+        <Grid Background="#252525">
+            <Label Content="" />
             <Label
                 Name="Name"
-                Width="300"
-                Height="30"
-                Margin="200,75,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,35,0,0"
                 Content="Name" />
             <Label
                 Name="Number"
-                Width="300"
-                Height="30"
-                Margin="200,150,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,70,0,0"
                 Content="Number" />
 
             <Label
                 Name="LicenseDateOfIssue"
-                Width="300"
-                Height="30"
-                Margin="200,225,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,105,0,0"
                 Content="License Date of Issue" />
-
-
             <Label
                 Name="LicenseDateOfExpiry"
-                Width="300"
-                Height="30"
-                Margin="200,300,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,140,0,0"
                 Content="License Date of Expiry" />
-
-
             <Label
                 Name="MaintenanceDateOfIssue"
-                Width="300"
-                Height="30"
-                Margin="200,375,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,175,0,0"
                 Content="Maintenance Date of Issue" />
-
-
             <Label
                 Name="MaintenanceDateOfExpiry"
-                Width="300"
-                Height="30"
-                Margin="200,450,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,210,0,0"
                 Content="Maintenance Date of Expiry" />
-
             <Label
                 Name="InsuranceDateOfIssue"
-                Width="300"
-                Height="30"
-                Margin="200,525,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,245,0,0"
                 Content="Insurance Date of Issue" />
-
-
             <Label
                 Name="InsuranceDateOfExpiry"
-                Width="300"
-                Height="30"
-                Margin="200,600,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,280,0,0"
                 Content="Insurance Date of Expiry" />
-
             <Label
                 Name="LPacketDateOfIssue"
-                Width="300"
-                Height="30"
-                Margin="200,675,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,315,0,0"
                 Content="LPacket Date of Issue" />
-
-
             <Label
                 Name="LPacketDateOfExpiry"
-                Width="300"
-                Height="30"
-                Margin="200,750,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,350,0,0"
                 Content="LPacket Date of Expiry" />
-
-
             <Label
                 Name="TachoСalibrationDateOfIssue"
-                Width="300"
-                Height="30"
-                Margin="200,825,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,385,0,0"
                 Content="Tacho Calibration Date of Issue" />
-
             <Label
                 Name="TachoСalibrationDateOfExpiry"
-                Width="300"
-                Height="30"
-                Margin="200,900,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,420,0,0"
                 Content="Tacho Calibration Date of Expiry" />
-
             <Label
                 Name="ExtinguisherDateOfExpiry"
-                Width="300"
-                Height="30"
-                Margin="200,975,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,455,0,0"
                 Content="Extinguisher Date of Expiry" />
-
-
             <Label
                 Name="Service"
-                Width="300"
-                Height="30"
-                Margin="200,1050,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Margin="0,490,0,0"
                 Content="Service" />
-
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,1100,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="" />
+            <Label Content="" />
             <Button
-                Margin="580,80,0,0"
-                HorizontalAlignment="Left"
+                Margin="0,47,25,0"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Delete this car" />
-            <Button
-                Margin="600,270,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="Button_Click_License"
-                Content="Add new License" />
-            <Button
-                Margin="600,415,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="Button_Click_Maintenance"
-                Content="Add new Maintenance" />
-            <Button
-                Margin="600,565,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="Button_Click_Insurance"
-                Content="Add new Insurance" />
-            <Button
-                Margin="600,715,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="Button_Click_LPacket"
-                Content="Add new LPacket" />
-            <Button
-                Margin="600,865,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="Button_Click_Tacho"
-                Content="Add new Tacho Calibration" />
-            <Button
-                Margin="600,975,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="Button_Click_Extinguisher"
-                Content="Add new Extinguisher" />
-            <Button
-                Margin="600,1050,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="Button_Click_Service"
-                Content="Add new Service" />
+                Content="Delete this car"
+                Style="{StaticResource CustomButtonStyle}" />
+            <StackPanel
+                Margin="0,100,10,0"
+                HorizontalAlignment="Right"
+                Orientation="Vertical">
+                <Button
+                    Click="Button_Click_License"
+                    Content="Add new License"
+                    Style="{StaticResource CustomButtonStyle}" />
+                <Button
+                    Click="Button_Click_Maintenance"
+                    Content="Add new Maintenance"
+                    Style="{StaticResource CustomButtonStyle}" />
+                <Button
+                    Click="Button_Click_Insurance"
+                    Content="Add new Insurance"
+                    Style="{StaticResource CustomButtonStyle}" />
+                <Button
+                    Click="Button_Click_LPacket"
+                    Content="Add new LPacket"
+                    Style="{StaticResource CustomButtonStyle}" />
+                <Button
+                    Click="Button_Click_Tacho"
+                    Content="Add new Tacho Calibration"
+                    Style="{StaticResource CustomButtonStyle}" />
+                <Button
+                    Click="Button_Click_Extinguisher"
+                    Content="Add new Extinguisher"
+                    Style="{StaticResource CustomButtonStyle}" />
+                <Button
+                    Click="Button_Click_Service"
+                    Content="Add new Service"
+                    Style="{StaticResource CustomButtonStyle}" />
+            </StackPanel>
         </Grid>
     </ScrollViewer>
 </Page>

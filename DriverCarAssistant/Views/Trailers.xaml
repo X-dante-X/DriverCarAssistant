@@ -15,9 +15,9 @@
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Padding" Value="10" />
+            <Setter Property="Padding" Value="15" />
             <Setter Property="Margin" Value="10" />
-            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
             <Setter Property="VerticalAlignment" Value="Top" />
             <Setter Property="Template">
                 <Setter.Value>
@@ -26,7 +26,7 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="8">
+                            CornerRadius="5">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
@@ -35,7 +35,7 @@
         </Style>
     </Page.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid Background="#202020">
+        <Grid Background="#252525">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
@@ -51,6 +51,8 @@
                 Foreground="White" />
 
             <Button
+                Width="150"
+                Height="32"
                 Margin="10,10,10,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"

@@ -35,6 +35,7 @@ namespace DriverCarAssistant.Views
                 Button button = new Button();
                 button.Content = car.Nubmer;
                 button.Click += (sender, e) => ShowCarDetails(car);
+                button.Style = FindResource("AddCarButtonStyle") as Style;
 
                 ButtonContainer.Children.Add(button);
             }
