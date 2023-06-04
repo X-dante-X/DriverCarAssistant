@@ -18,7 +18,7 @@ To run the DriverCarAssistant WPF application, you need to have the following so
 Follow the steps below to set up and run the application:
 
 1. Clone the repository or download the source code files.
-> git clone https://github.com/your-username/DriverCarAssistant.git
+> git clone https://github.com/X-dante-X/DriverCarAssistant
 2. Open the project in your preferred development environment (e.g., Visual Studio).
 3. Restore the NuGet packages specified in the project's dependencies.
 4. Build the project to ensure all dependencies are resolved.
