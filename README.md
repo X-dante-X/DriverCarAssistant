@@ -60,6 +60,6 @@ The DriverCarAssistant application has the following known issues:
 Contributions to DriverCarAssistant are welcome! If you discover any bugs, have suggestions for improvements, or would like to add new features, please submit an issue or a pull request on the GitHub repository.
 
 ## License
-DriverCarAssistant is released under the ** MIT License **. Feel free to use and modify the application according to the terms of the license.
+DriverCarAssistant is released under the **MIT License**. Feel free to use and modify the application according to the terms of the license.
 
 If you have any further questions or need additional assistance, please let me know!
