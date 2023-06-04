@@ -28,20 +28,20 @@ namespace DriverCarAssistant.Views
         {
             InitializeComponent();
             Car = car;
-            ((Label)FindName("Name")).Content = ((Label)FindName("Name")).Content+": "+car.Name;
-            ((Label)FindName("Number")).Content = ((Label)FindName("Number")).Content + ": " + car.Nubmer;
-            ((Label)FindName("LicenseDateOfIssue")).Content = ((Label)FindName("LicenseDateOfIssue")).Content + ": " +car.LicenseDateOfIssue.ToShortDateString();
-            ((Label)FindName("LicenseDateOfExpiry")).Content = ((Label)FindName("LicenseDateOfExpiry")).Content + ": " + car.LicenseDateOfExpiry.ToShortDateString();
-            ((Label)FindName("MaintenanceDateOfIssue")).Content = ((Label)FindName("MaintenanceDateOfIssue")).Content + ": " + car.MaintenanceDateOfIssue.ToShortDateString();
-            ((Label)FindName("MaintenanceDateOfExpiry")).Content = ((Label)FindName("MaintenanceDateOfExpiry")).Content + ": " + car.MaintenanceDateOfExpiry.ToShortDateString();
-            ((Label)FindName("InsuranceDateOfIssue")).Content = ((Label)FindName("InsuranceDateOfIssue")).Content + ": " + car.InsuranceDateOfIssue.ToShortDateString();
-            ((Label)FindName("InsuranceDateOfExpiry")).Content = ((Label)FindName("InsuranceDateOfExpiry")).Content + ": " + car.InsuranceDateOfExpiry.ToShortDateString();
-            ((Label)FindName("LPacketDateOfIssue")).Content = ((Label)FindName("LPacketDateOfIssue")).Content + ": " + car.LPacketDateOfIssue.ToShortDateString();
-            ((Label)FindName("LPacketDateOfExpiry")).Content = ((Label)FindName("LPacketDateOfExpiry")).Content + ": " + car.LPacketDateOfExpiry.ToShortDateString();
-            ((Label)FindName("TachoСalibrationDateOfIssue")).Content = ((Label)FindName("TachoСalibrationDateOfIssue")).Content + ": " + car.TachoСalibrationDateOfIssue.ToShortDateString();
-            ((Label)FindName("TachoСalibrationDateOfExpiry")).Content = ((Label)FindName("TachoСalibrationDateOfExpiry")).Content + ": " + car.TachoСalibrationDateOfExpiry.ToShortDateString();
-            ((Label)FindName("ExtinguisherDateOfExpiry")).Content = ((Label)FindName("ExtinguisherDateOfExpiry")).Content + ": " + car.ExtinguisherDateOfExpiry.ToShortDateString();
-            ((Label)FindName("Service")).Content = ((Label)FindName("Service")).Content + ": " +car.Service+" km";
+            ((Label)FindName("Name")).Content += ": " + car.Name;
+            ((Label)FindName("Number")).Content += ": " + car.Nubmer;
+            ((Label)FindName("LicenseDateOfIssue")).Content += ": " + car.LicenseDateOfIssue.ToShortDateString();
+            ((Label)FindName("LicenseDateOfExpiry")).Content += ": " + car.LicenseDateOfExpiry.ToShortDateString();
+            ((Label)FindName("MaintenanceDateOfIssue")).Content += ": " + car.MaintenanceDateOfIssue.ToShortDateString();
+            ((Label)FindName("MaintenanceDateOfExpiry")).Content += ": " + car.MaintenanceDateOfExpiry.ToShortDateString();
+            ((Label)FindName("InsuranceDateOfIssue")).Content += ": " + car.InsuranceDateOfIssue.ToShortDateString();
+            ((Label)FindName("InsuranceDateOfExpiry")).Content += ": " + car.InsuranceDateOfExpiry.ToShortDateString();
+            ((Label)FindName("LPacketDateOfIssue")).Content += ": " + car.LPacketDateOfIssue.ToShortDateString();
+            ((Label)FindName("LPacketDateOfExpiry")).Content += ": " + car.LPacketDateOfExpiry.ToShortDateString();
+            ((Label)FindName("TachoСalibrationDateOfIssue")).Content += ": " + car.TachoСalibrationDateOfIssue.ToShortDateString();
+            ((Label)FindName("TachoСalibrationDateOfExpiry")).Content += ": " + car.TachoСalibrationDateOfExpiry.ToShortDateString();
+            ((Label)FindName("ExtinguisherDateOfExpiry")).Content += ": " + car.ExtinguisherDateOfExpiry.ToShortDateString();
+            ((Label)FindName("Service")).Content += ": " + car.Service+" km";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

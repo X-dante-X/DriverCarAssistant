@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace DriverCarAssistant.Views
 {
@@ -34,7 +35,7 @@ namespace DriverCarAssistant.Views
             using Context context = new Context();
             Driver driver = new Driver()
             {
-                PESEL = int.Parse(((TextBox)FindName("PESEL")).Text),
+                PESEL = !string.IsNullOrEmpty(((TextBox)FindName("PESEL")).Text) ? int.Parse(((TextBox)FindName("PESEL")).Text) : 0,
                 FirstName = ((TextBox)FindName("FirstName")).Text,
                 SecondName = ((TextBox)FindName("SecondName")).Text,
                 Passport = new Passport()

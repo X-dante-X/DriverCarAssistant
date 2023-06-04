@@ -28,11 +28,11 @@ namespace DriverCarAssistant.Views
         {
             Trailer = trailer;
             InitializeComponent();
-            ((Label)FindName("Name")).Content = ((Label)FindName("Name")).Content + ": " + trailer.Name;
-            ((Label)FindName("Number")).Content = ((Label)FindName("Number")).Content + ": " + trailer.Nubmer;
-            ((Label)FindName("InsuranceDateOfIssue")).Content = ((Label)FindName("InsuranceDateOfIssue")).Content + ": " + trailer.InsuranceDateOfIssue.ToShortDateString();
-            ((Label)FindName("InsuranceDateOfExpiry")).Content = ((Label)FindName("InsuranceDateOfExpiry")).Content + ": " + trailer.InsuranceDateOfExpiry.ToShortDateString();
-            ((Label)FindName("ExtinguisherDateOfExpiry")).Content = ((Label)FindName("ExtinguisherDateOfExpiry")).Content + ": " + trailer.ExtinguisherDateOfExpiry.ToShortDateString();
+            ((Label)FindName("Name")).Content += ": " + trailer.Name;
+            ((Label)FindName("Number")).Content += ": " + trailer.Nubmer;
+            ((Label)FindName("InsuranceDateOfIssue")).Content += ": " + trailer.InsuranceDateOfIssue.ToShortDateString();
+            ((Label)FindName("InsuranceDateOfExpiry")).Content += ": " + trailer.InsuranceDateOfExpiry.ToShortDateString();
+            ((Label)FindName("ExtinguisherDateOfExpiry")).Content += ": " + trailer.ExtinguisherDateOfExpiry.ToShortDateString();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

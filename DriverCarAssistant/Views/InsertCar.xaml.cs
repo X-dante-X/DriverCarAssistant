@@ -32,8 +32,8 @@ namespace DriverCarAssistant.Views
             using Context context = new Context();
             Car car = new Car()
             {
-                Name = ((TextBox)FindName("Name")).Text,
-                Nubmer = ((TextBox)FindName("Number")).Text,
+                Name = ((TextBox)FindName("Name")).Text ?? "Empty",
+                Nubmer = ((TextBox)FindName("Number")).Text ?? "Empty",
                 LicenseDateOfIssue = ((DatePicker)FindName("LicenseDateOfIssue")).SelectedDate ?? DateTime.MinValue,
                 LicenseDateOfExpiry = ((DatePicker)FindName("LicenseDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
                 MaintenanceDateOfIssue = ((DatePicker)FindName("MaintenanceDateOfIssue")).SelectedDate ?? DateTime.MinValue,    
@@ -45,7 +45,7 @@ namespace DriverCarAssistant.Views
                 TachoСalibrationDateOfIssue = ((DatePicker)FindName("TachoCalibrationDateOfIssue")).SelectedDate ?? DateTime.MinValue,
                 TachoСalibrationDateOfExpiry = ((DatePicker)FindName("TachoCalibrationDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
                 ExtinguisherDateOfExpiry = ((DatePicker)FindName("ExtinguisherDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
-                Service = int.Parse(((TextBox)FindName("Service")).Text)
+                Service = !string.IsNullOrEmpty(((TextBox)FindName("Service")).Text) ? int.Parse(((TextBox)FindName("Service")).Text) : 0
             };
 
             context.Cars.Add(car);

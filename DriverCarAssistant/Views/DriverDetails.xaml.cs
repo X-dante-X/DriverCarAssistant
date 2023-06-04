@@ -28,22 +28,22 @@ namespace DriverCarAssistant.Views
         {
             Driver = driver;
             InitializeComponent();
-            ((Label)FindName("PESEL")).Content = ((Label)FindName("PESEL")).Content + ": " + driver.PESEL;
-            ((Label)FindName("FirstName")).Content = ((Label)FindName("FirstName")).Content + ": " + driver.FirstName;
-            ((Label)FindName("SecondName")).Content = ((Label)FindName("SecondName")).Content + ": " + driver.SecondName;
-            ((Label)FindName("PassportNumber")).Content = ((Label)FindName("PassportNumber")).Content + ": " + driver.Passport.PassportNumber;
-            ((Label)FindName("PassportDateOfBirth")).Content = ((Label)FindName("PassportDateOfBirth")).Content + ": " + driver.Passport.DateOfBirth.ToShortDateString();
-            ((Label)FindName("PassportDateOfIssue")).Content = ((Label)FindName("PassportDateOfIssue")).Content + ": " + driver.Passport.DateOfIssue.ToShortDateString();
-            ((Label)FindName("PassportDateOfExpiry")).Content = ((Label)FindName("PassportDateOfExpiry")).Content + ": " + driver.Passport.DateOfExpiry.ToShortDateString();
-            ((Label)FindName("DrivingLicenseDateOfIssue")).Content = ((Label)FindName("DrivingLicenseDateOfIssue")).Content + ": " + driver.DrivingLicense.DateOfIssue.ToShortDateString();
-            ((Label)FindName("DrivingLicenseDateOfExpiry")).Content = ((Label)FindName("DrivingLicenseDateOfExpiry")).Content + ": " + driver.DrivingLicense.DateOfExpiry.ToShortDateString();
-            ((Label)FindName("Code95DateOfIssue")).Content = ((Label)FindName("Code95DateOfIssue")).Content + ": " + driver.Code95DateOfIssue.ToShortDateString();
-            ((Label)FindName("Code95DateOfExpiry")).Content = ((Label)FindName("Code95DateOfExpiry")).Content + ": " + driver.Code95DateOfExpiry.ToShortDateString();
-            ((Label)FindName("VisaNumber")).Content = ((Label)FindName("VisaNumber")).Content + ": " + driver.Visa?.VisaNumber;
-            ((Label)FindName("VisaDateOfIssue")).Content = ((Label)FindName("VisaDateOfIssue")).Content + ": " + driver.Visa?.DateOfIssue.ToShortDateString();
-            ((Label)FindName("VisaDateOfExpiry")).Content = ((Label)FindName("VisaDateOfExpiry")).Content + ": " + driver.Visa?.DateOfExpiry.ToShortDateString();
-            ((Label)FindName("TachoKardDateOfIssue")).Content = ((Label)FindName("TachoKardDateOfIssue")).Content + ": " + driver.TachoKardDateOfIssue.ToShortDateString();
-            ((Label)FindName("TachoKardDateOfExpiry")).Content = ((Label)FindName("TachoKardDateOfExpiry")).Content + ": " + driver.TachoKardDateOfExpiry.ToShortDateString();
+            ((Label)FindName("PESEL")).Content += ": " + driver.PESEL;
+            ((Label)FindName("FirstName")).Content += ": " + driver.FirstName;
+            ((Label)FindName("SecondName")).Content += ": " + driver.SecondName;
+            ((Label)FindName("PassportNumber")).Content += ": " + driver.Passport.PassportNumber;
+            ((Label)FindName("PassportDateOfBirth")).Content += ": " + driver.Passport.DateOfBirth.ToShortDateString();
+            ((Label)FindName("PassportDateOfIssue")).Content += ": " + driver.Passport.DateOfIssue.ToShortDateString();
+            ((Label)FindName("PassportDateOfExpiry")).Content += ": " + driver.Passport.DateOfExpiry.ToShortDateString();
+            ((Label)FindName("DrivingLicenseDateOfIssue")).Content += ": " + driver.DrivingLicense.DateOfIssue.ToShortDateString();
+            ((Label)FindName("DrivingLicenseDateOfExpiry")).Content += ": " + driver.DrivingLicense.DateOfExpiry.ToShortDateString();
+            ((Label)FindName("Code95DateOfIssue")).Content += ": " + driver.Code95DateOfIssue.ToShortDateString();
+            ((Label)FindName("Code95DateOfExpiry")).Content += ": " + driver.Code95DateOfExpiry.ToShortDateString();
+            ((Label)FindName("VisaNumber")).Content += ": " + driver.Visa?.VisaNumber;
+            ((Label)FindName("VisaDateOfIssue")).Content += ": " + driver.Visa?.DateOfIssue.ToShortDateString();
+            ((Label)FindName("VisaDateOfExpiry")).Content += ": " + driver.Visa?.DateOfExpiry.ToShortDateString();
+            ((Label)FindName("TachoKardDateOfIssue")).Content += ": " + driver.TachoKardDateOfIssue.ToShortDateString();
+            ((Label)FindName("TachoKardDateOfExpiry")).Content += ": " + driver.TachoKardDateOfExpiry.ToShortDateString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
