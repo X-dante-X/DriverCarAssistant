@@ -9,102 +9,110 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="210" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Margin" Value="15" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Background" Value="#30302F" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="ButtonBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#505050" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
 
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CustomDatePickerStyle" TargetType="DatePicker">
+            <Setter Property="Width" Value="165" />
+            <Setter Property="Height" Value="33.94" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Background" Value="#30302F" />
+            <Setter Property="Foreground" Value="#30302F" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        <Style x:Key="CustomTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="165" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Background" Value="#FFFFFF" />
+            <Setter Property="Foreground" Value="#30302F" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Page.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid>
+        <Grid Background="#252525">
             <Frame
                 x:Name="mainFrame"
                 JournalOwnership="OwnsJournal"
                 NavigationUIVisibility="Hidden" />
-            <Label
-                Width="60"
-                Height="30"
-                Margin="200,75,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Name" />
+            <Label Margin="0,75,0,0" Content="Name" />
             <TextBox
                 Name="Name"
-                Width="120"
-                Height="30"
                 Margin="370,75,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Style="{StaticResource CustomTextBoxStyle}"
                 Text="{Binding Name}"
                 TextWrapping="Wrap" />
 
-            <Label
-                Width="60"
-                Height="30"
-                Margin="200,150,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Number" />
+            <Label Margin="0,150,0,0" Content="Number" />
             <TextBox
                 Name="Number"
-                Width="120"
-                Height="30"
                 Margin="370,150,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Style="{StaticResource CustomTextBoxStyle}"
                 Text="{Binding Number}"
                 TextWrapping="Wrap" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,225,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Insurance Date of Issue" />
+            <Label Margin="0,225,0,0" Content="Insurance Date of Issue" />
             <DatePicker
                 Name="InsuranceDateOfIssue"
-                Width="120"
-                Height="30"
                 Margin="370,225,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding InsuranceDateOfIssue}" />
+                SelectedDate="{Binding InsuranceDateOfIssue}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,300,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Insurance Date of Expiry" />
+            <Label Margin="0,300,0,0" Content="Insurance Date of Expiry" />
             <DatePicker
                 Name="InsuranceDateOfExpiry"
-                Width="120"
-                Height="30"
                 Margin="370,300,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding InsuranceDateOfExpiry}" />
+                SelectedDate="{Binding InsuranceDateOfExpiry}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,375,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Extinguisher Date of Expiry" />
+            <Label Margin="0,375,0,0" Content="Extinguisher Date of Expiry" />
             <DatePicker
                 Name="ExtinguisherDateOfExpiry"
-                Width="120"
-                Height="30"
                 Margin="370,375,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding ExtinguisherDateOfExpiry}" />
-
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,400,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="" />
+                SelectedDate="{Binding ExtinguisherDateOfExpiry}"
+                Style="{StaticResource CustomDatePickerStyle}" />
             <Label
                 Margin="0,23,0,0"
                 HorizontalAlignment="Center"
@@ -113,11 +121,13 @@
             <Button
                 Width="99"
                 Height="30"
-                Margin="579,375,0,0"
-                HorizontalAlignment="Left"
+                Margin="0,450,0,0"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Add" />
+                Content="Add"
+                Style="{StaticResource CustomButtonStyle}" />
+            <Label Margin="370,475,0,0" Content=" " />
         </Grid>
     </ScrollViewer>
 </Page>

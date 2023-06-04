@@ -42,8 +42,8 @@ namespace DriverCarAssistant.Views
                 InsuranceDateOfExpiry = ((DatePicker)FindName("InsuranceDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
                 LPacketDateOfIssue = ((DatePicker)FindName("LPacketDateOfIssue")).SelectedDate ?? DateTime.MinValue,
                 LPacketDateOfExpiry = ((DatePicker)FindName("LPacketDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
-                TachoСalibrationDateOfIssue = ((DatePicker)FindName("TachoСalibrationDateOfIssue")).SelectedDate ?? DateTime.MinValue,
-                TachoСalibrationDateOfExpiry = ((DatePicker)FindName("TachoСalibrationDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
+                TachoСalibrationDateOfIssue = ((DatePicker)FindName("TachoCalibrationDateOfIssue")).SelectedDate ?? DateTime.MinValue,
+                TachoСalibrationDateOfExpiry = ((DatePicker)FindName("TachoCalibrationDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
                 ExtinguisherDateOfExpiry = ((DatePicker)FindName("ExtinguisherDateOfExpiry")).SelectedDate ?? DateTime.MinValue,
                 Service = int.Parse(((TextBox)FindName("Service")).Text)
             };

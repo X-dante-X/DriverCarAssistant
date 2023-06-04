@@ -141,7 +141,7 @@
                 Click="Button_Click"
                 Content="Delete this driver"
                 Style="{StaticResource CustomButtonStyle}" />
-                
+
             <StackPanel
                 Margin="0,100,10,0"
                 HorizontalAlignment="Right"

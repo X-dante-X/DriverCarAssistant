@@ -32,7 +32,7 @@ namespace DriverCarAssistant.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             using Context context = new Context();
-            Driver.Visa.VisaNumber = ((TextBox)FindName("PassportNumber")).Text;
+            Driver.Visa.VisaNumber = ((TextBox)FindName("VisaNumber")).Text;
             Driver.Visa.DateOfIssue = ((DatePicker)FindName("DateOfIssue")).SelectedDate ?? DateTime.MinValue;
             Driver.Visa.DateOfExpiry = ((DatePicker)FindName("DateOfExpiry")).SelectedDate ?? DateTime.MinValue;
             context.SaveChanges();

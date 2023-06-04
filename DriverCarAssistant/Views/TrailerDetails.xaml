@@ -9,7 +9,7 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-<Page.Resources>
+    <Page.Resources>
         <Style TargetType="Label">
             <Setter Property="Margin" Value="10" />
             <Setter Property="HorizontalAlignment" Value="Left" />
@@ -62,7 +62,7 @@
                 Name="Number"
                 Margin="0,70,0,0"
                 Content="Number" />
-             <Label
+            <Label
                 Name="InsuranceDateOfIssue"
                 Margin="0,105,0,0"
                 Content="Insurance Date of Issue" />
@@ -85,14 +85,14 @@
                 Margin="0,100,10,0"
                 HorizontalAlignment="Right"
                 Orientation="Vertical">
-            <Button
-                Click="Button_Click_Insurance"
-                Content="Add new Insurance"
-                Style="{StaticResource CustomButtonStyle}" />
-            <Button
-                Click="Button_Click_Extinguisher"
-                Content="Add new Extinguisher" 
-                Style="{StaticResource CustomButtonStyle}"/>
+                <Button
+                    Click="Button_Click_Insurance"
+                    Content="Add new Insurance"
+                    Style="{StaticResource CustomButtonStyle}" />
+                <Button
+                    Click="Button_Click_Extinguisher"
+                    Content="Add new Extinguisher"
+                    Style="{StaticResource CustomButtonStyle}" />
             </StackPanel>
         </Grid>
     </ScrollViewer>

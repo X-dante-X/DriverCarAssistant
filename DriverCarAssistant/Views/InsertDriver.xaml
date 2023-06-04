@@ -9,295 +9,204 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="210" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Margin" Value="15" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Background" Value="#30302F" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="ButtonBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#505050" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CustomDatePickerStyle" TargetType="DatePicker">
+            <Setter Property="Width" Value="165" />
+            <Setter Property="Height" Value="33.94" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Background" Value="#30302F" />
+            <Setter Property="Foreground" Value="#30302F" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        <Style x:Key="CustomTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="165" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Background" Value="#FFFFFF" />
+            <Setter Property="Foreground" Value="#30302F" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Page.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid>
+        <Grid Background="#252525">
             <Frame
                 x:Name="mainFrame"
                 JournalOwnership="OwnsJournal"
                 NavigationUIVisibility="Hidden" />
+
             <Label
                 Margin="0,23,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Content="Insert data to add a new driver" />
 
-            <Label
-                Width="60"
-                Height="30"
-                Margin="200,75,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="PESEL" />
+            <Label Margin="0,75,0,0" Content="PESEL" />
             <TextBox
                 Name="PESEL"
-                Width="120"
-                Height="30"
                 Margin="370,75,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
                 PreviewTextInput="TextBox_PreviewTextInput"
-                Text="{Binding PESEL}"
-                TextWrapping="Wrap" />
+                Style="{StaticResource CustomTextBoxStyle}"
+                Text="{Binding PESEL}" />
 
-            <Label
-                Width="100"
-                Height="30"
-                Margin="200,150,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="First name" />
+            <Label Margin="0,150,0,0" Content="First name" />
             <TextBox
                 Name="FirstName"
-                Width="120"
-                Height="30"
                 Margin="370,150,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="{Binding FirstName}"
-                TextWrapping="Wrap" />
+                Style="{StaticResource CustomTextBoxStyle}"
+                Text="{Binding FirstName}" />
 
-            <Label
-                Width="100"
-                Height="30"
-                Margin="200,225,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Second name" />
+            <Label Margin="0,225,0,0" Content="Second name" />
             <TextBox
                 Name="SecondName"
-                Width="120"
-                Height="30"
                 Margin="370,225,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="{Binding SecondName}"
-                TextWrapping="Wrap" />
+                Style="{StaticResource CustomTextBoxStyle}"
+                Text="{Binding SecondName}" />
 
-            <Label
-                Width="125"
-                Height="30"
-                Margin="200,300,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Passport Number" />
+            <Label Margin="0,300,0,0" Content="Passport Number" />
             <TextBox
                 Name="PassportNumber"
-                Width="120"
-                Height="30"
                 Margin="370,300,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="{Binding Passport.PassportNumber}"
-                TextWrapping="Wrap" />
+                Style="{StaticResource CustomTextBoxStyle}"
+                Text="{Binding Passport.PassportNumber}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,375,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Passport Date of Birth" />
+            <Label Margin="0,375,0,0" Content="Passport Date of Birth" />
             <DatePicker
                 Name="PassportDateOfBirth"
-                Width="120"
-                Height="30"
                 Margin="370,375,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding Passport.DateOfBirth}" />
+                SelectedDate="{Binding Passport.DateOfBirth}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,450,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Passport Date of Issue" />
+            <Label Margin="0,450,0,0" Content="Passport Date of Issue" />
             <DatePicker
                 Name="PassportDateOfIssue"
-                Width="120"
-                Height="30"
                 Margin="370,450,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding Passport.DateOfIssue}" />
+                SelectedDate="{Binding Passport.DateOfIssue}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,525,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Passport Date of Expiry" />
+            <Label Margin="0,525,0,0" Content="Passport Date of Expiry" />
             <DatePicker
                 Name="PassportDateOfExpiry"
-                Width="120"
-                Height="30"
                 Margin="370,525,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding Passport.DateOfExpiry}" />
+                SelectedDate="{Binding Passport.DateOfExpiry}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="200"
-                Height="30"
-                Margin="200,600,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Driving License Date of Issue" />
+            <Label Margin="0,600,0,0" Content="Driving License Date of Issue" />
             <DatePicker
                 Name="DrivingLicenseDateOfIssue"
-                Width="120"
-                Height="30"
                 Margin="370,600,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding DrivingLicense.DateOfIssue}" />
+                SelectedDate="{Binding DrivingLicense.DateOfIssue}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="200"
-                Height="30"
-                Margin="200,675,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Driving License Date of Expiry" />
+            <Label Margin="0,675,0,0" Content="Driving License Date of Expiry" />
             <DatePicker
                 Name="DrivingLicenseDateOfExpiry"
-                Width="120"
-                Height="30"
                 Margin="370,675,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding DrivingLicense.DateOfExpiry}" />
+                SelectedDate="{Binding DrivingLicense.DateOfExpiry}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="200"
-                Height="30"
-                Margin="200,750,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Code 95 Date of Issue" />
+            <Label Margin="0,750,0,0" Content="Code 95 Date of Issue" />
             <DatePicker
                 Name="Code95DateOfIssue"
-                Width="120"
-                Height="30"
                 Margin="370,750,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding Code95DateOfIssue}" />
+                SelectedDate="{Binding Code95DateOfIssue}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="200"
-                Height="30"
-                Margin="200,825,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Code 95 Date of Expiry" />
+            <Label Margin="0,825,0,0" Content="Code 95 Date of Expiry" />
             <DatePicker
                 Name="Code95DateOfExpiry"
-                Width="120"
-                Height="30"
                 Margin="370,825,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding Code95DateOfExpiry}" />
+                SelectedDate="{Binding Code95DateOfExpiry}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,900,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Visa Number" />
+            <Label Margin="0,900,0,0" Content="Visa Number" />
             <TextBox
                 Name="VisaNumber"
-                Width="120"
-                Height="30"
                 Margin="370,900,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="{Binding Visa.VisaNumber}"
-                TextWrapping="Wrap" />
+                Style="{StaticResource CustomTextBoxStyle}"
+                Text="{Binding Visa.VisaNumber}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,975,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Visa Date of Issue" />
+            <Label Margin="0,975,0,0" Content="Visa Date of Issue" />
             <DatePicker
                 Name="VisaDateOfIssue"
-                Width="120"
-                Height="30"
                 Margin="370,975,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding Visa.DateOfIssue}" />
+                SelectedDate="{Binding Visa.DateOfIssue}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,1050,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Visa Date of Expiry" />
+            <Label Margin="0,1050,0,0" Content="Visa Date of Expiry" />
             <DatePicker
                 Name="VisaDateOfExpiry"
-                Width="120"
-                Height="30"
                 Margin="370,1050,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding Visa.DateOfExpiry}" />
+                SelectedDate="{Binding Visa.DateOfExpiry}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="200"
-                Height="30"
-                Margin="200,1125,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="TachoKard Date of Issue" />
+            <Label Margin="0,1125,0,0" Content="TachoKard Date of Issue" />
             <DatePicker
                 Name="TachoKardDateOfIssue"
-                Width="120"
-                Height="30"
                 Margin="370,1125,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding TachoKardDateOfIssue}" />
+                SelectedDate="{Binding TachoKardDateOfIssue}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="200"
-                Height="30"
-                Margin="200,1200,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="TachoKard Date of Expiry" />
+            <Label Margin="0,1200,0,0" Content="TachoKard Date of Expiry" />
             <DatePicker
                 Name="TachoKardDateOfExpiry"
-                Width="120"
-                Height="30"
                 Margin="370,1200,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                SelectedDate="{Binding TachoKardDateOfExpiry}" />
+                SelectedDate="{Binding TachoKardDateOfExpiry}"
+                Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label
-                Width="150"
-                Height="30"
-                Margin="200,1250,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="" />
             <Button
                 Width="99"
                 Height="30"
-                Margin="579,1200,0,0"
-                HorizontalAlignment="Left"
+                Margin="0,1275,0,0"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Add" />
+                Content="Add"
+                Style="{StaticResource CustomButtonStyle}" />
+            <Label Margin="370,1300,0,0" Content=" " />
         </Grid>
     </ScrollViewer>
 </Page>
