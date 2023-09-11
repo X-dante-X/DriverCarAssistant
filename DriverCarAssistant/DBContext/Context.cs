@@ -25,7 +25,7 @@ public class Context : DbContext
     {
         //Add-Migration InitalCreate
         //Update-Database
-        string currentDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory)).FullName).FullName).FullName;
+        string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
         string dbFilePath = Path.Combine(currentDirectory, "database.db3");
         SqliteConnectionStringBuilder builder = new SqliteConnectionStringBuilder();
         builder.DataSource = dbFilePath;

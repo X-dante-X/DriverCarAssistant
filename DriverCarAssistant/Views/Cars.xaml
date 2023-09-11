@@ -51,7 +51,7 @@
                 Margin="10,10,10,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Content="Cars"
+                Content="Samochody"
                 FontSize="24"
                 FontWeight="Bold"
                 Foreground="White" />
@@ -63,7 +63,8 @@
                     Margin="0,0,10,0"
                     Padding="15"
                     Click="Button_Click"
-                    Content="Add New Car"
+                    Content="Dodaj nowy samochód"
+                    FontSize="12"
                     Style="{StaticResource AddCarButtonStyle}" />
             </Grid>
 

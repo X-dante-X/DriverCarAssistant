@@ -89,11 +89,11 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Click="Button_Click"
-            Content="Update"
+            Content="Zaktualizuj"
             Style="{StaticResource CustomButtonStyle}" />
-        <Label Margin="160,140,0,0" Content="Date of Issue" />
-        <Label Margin="160,200,0,0" Content="Date of Expiry" />
-        <Label Margin="160,80,0,0" Content="Passport Number" />
+        <Label Margin="160,140,0,0" Content="Data wydania" />
+        <Label Margin="160,200,0,0" Content="Data ważności" />
+        <Label Margin="160,80,0,0" Content="Numer paszportu" />
         <TextBox
             Name="PassportNumber"
             Margin="435,80,0,0"

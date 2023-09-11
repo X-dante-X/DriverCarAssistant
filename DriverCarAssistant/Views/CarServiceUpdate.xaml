@@ -66,9 +66,9 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Click="Button_Click"
-            Content="Update"
+            Content="Zaktualizuj"
             Style="{StaticResource CustomButtonStyle}" />
-        <Label Margin="160,200,0,0" Content="Service" />
+        <Label Margin="160,200,0,0" Content="Serwis" />
         <TextBox
             Name="Service"
             Margin="435,209,0,0"

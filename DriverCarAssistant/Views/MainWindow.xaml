@@ -14,7 +14,7 @@
         <Style x:Key="StoreButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#30302F" />
             <Setter Property="Foreground" Value="White" />
-            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontSize" Value="12" />
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="Padding" Value="10" />
             <Setter Property="Margin" Value="10" />
@@ -64,7 +64,7 @@
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Drivers"
+                Content="Kierowcy"
                 Style="{StaticResource StoreButtonStyle}" />
             <Button
                 Name="Button2"
@@ -75,7 +75,7 @@
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Top"
                 Click="Button_Click_1"
-                Content="Cars"
+                Content="Samochody"
                 Style="{StaticResource StoreButtonStyle}" />
             <Button
                 Name="Button3"
@@ -86,7 +86,7 @@
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Top"
                 Click="Button_Click_2"
-                Content="Trailers"
+                Content="Przyczepy"
                 Style="{StaticResource StoreButtonStyle}" />
         </Grid>
 

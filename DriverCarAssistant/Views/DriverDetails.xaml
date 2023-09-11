@@ -61,77 +61,77 @@
             <Label
                 Name="FirstName"
                 Margin="0,70,0,0"
-                Content="First name" />
+                Content="Imię" />
 
             <Label
                 Name="SecondName"
                 Margin="0,105,0,0"
-                Content="Second name" />
+                Content="Nazwisko" />
 
             <Label
                 Name="PassportNumber"
                 Margin="0,140,0,0"
-                Content="Passport Number" />
+                Content="Numer paszportu" />
 
             <Label
                 Name="PassportDateOfBirth"
                 Margin="0,175,0,0"
-                Content="Passport Date of Birth" />
+                Content="Data urodzenia" />
 
             <Label
                 Name="PassportDateOfIssue"
                 Margin="0,210,0,0"
-                Content="Passport Date of Issue" />
+                Content="Data wydania paszportu" />
 
             <Label
                 Name="PassportDateOfExpiry"
                 Margin="0,245,0,0"
-                Content="Passport Date of Expiry" />
+                Content="Data ważności paszportu" />
 
             <Label
                 Name="DrivingLicenseDateOfIssue"
                 Margin="0,280,0,0"
-                Content="Driving License Date of Issue" />
+                Content="Data wydania prawa jazdy" />
 
             <Label
                 Name="DrivingLicenseDateOfExpiry"
                 Margin="0,315,0,0"
-                Content="Driving License Date of Expiry" />
+                Content="Data ważności prawa jazdy" />
 
             <Label
                 Name="Code95DateOfIssue"
                 Margin="0,350,0,0"
-                Content="Code 95 Date of Issue" />
+                Content="Kod 95 Data wydania" />
 
             <Label
                 Name="Code95DateOfExpiry"
                 Margin="0,385,0,0"
-                Content="Code 95 Date of Expiry" />
+                Content="Kod 95 Data ważności" />
 
             <Label
                 Name="VisaNumber"
                 Margin="0,420,0,0"
-                Content="Visa Number" />
+                Content="Numer wizy" />
 
             <Label
                 Name="VisaDateOfIssue"
                 Margin="0,455,0,0"
-                Content="Visa Date of Issue" />
+                Content="Data wydania wizy" />
 
             <Label
                 Name="VisaDateOfExpiry"
                 Margin="0,490,0,0"
-                Content="Visa Date of Expiry" />
+                Content="Data ważności wizy" />
 
             <Label
                 Name="TachoKardDateOfIssue"
                 Margin="0,525,0,0"
-                Content="TachoKard Date of Issue" />
+                Content="Data wydania karty Tacho" />
 
             <Label
                 Name="TachoKardDateOfExpiry"
                 Margin="0,560,0,0"
-                Content="TachoKard Date of Expiry" />
+                Content="Data ważności karty Tacho" />
 
             <Label Content="" />
 
@@ -139,7 +139,7 @@
                 Margin="0,47,25,0"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Delete this driver"
+                Content="Usuń tego kierowcę"
                 Style="{StaticResource CustomButtonStyle}" />
 
             <StackPanel
@@ -148,27 +148,27 @@
                 Orientation="Vertical">
                 <Button
                     Click="Button_Click_Passport"
-                    Content="Add new Passport"
+                    Content="Dodaj nowy paszport"
                     Style="{StaticResource CustomButtonStyle}" />
 
                 <Button
                     Click="Button_Click_DrivingLicense"
-                    Content="Add new Driving License"
+                    Content="Dodaj nowe prawo jazdy"
                     Style="{StaticResource CustomButtonStyle}" />
 
                 <Button
                     Click="Button_Click_Code95"
-                    Content="Add new Code 95"
+                    Content="Dodaj nowy kod 95"
                     Style="{StaticResource CustomButtonStyle}" />
 
                 <Button
                     Click="Button_Click_Visa"
-                    Content="Add new Visa"
+                    Content="Dodaj nową wizę"
                     Style="{StaticResource CustomButtonStyle}" />
 
                 <Button
                     Click="Button_Click_TachoKard"
-                    Content="Add new Tacho Kard"
+                    Content="Dodaj nową kartę Tacho"
                     Style="{StaticResource CustomButtonStyle}" />
             </StackPanel>
         </Grid>

@@ -77,7 +77,7 @@
                 x:Name="mainFrame"
                 JournalOwnership="OwnsJournal"
                 NavigationUIVisibility="Hidden" />
-            <Label Margin="0,75,0,0" Content="Name" />
+            <Label Margin="0,75,0,0" Content="Nazwa" />
             <TextBox
                 Name="Name"
                 Margin="370,75,0,0"
@@ -85,7 +85,7 @@
                 Text="{Binding Name}"
                 TextWrapping="Wrap" />
 
-            <Label Margin="0,150,0,0" Content="Number" />
+            <Label Margin="0,150,0,0" Content="Numer" />
             <TextBox
                 Name="Number"
                 Margin="370,150,0,0"
@@ -93,21 +93,21 @@
                 Text="{Binding Number}"
                 TextWrapping="Wrap" />
 
-            <Label Margin="0,225,0,0" Content="Insurance Date of Issue" />
+            <Label Margin="0,225,0,0" Content="Data wystawienia ubezpieczenia" />
             <DatePicker
                 Name="InsuranceDateOfIssue"
                 Margin="370,225,0,0"
                 SelectedDate="{Binding InsuranceDateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,300,0,0" Content="Insurance Date of Expiry" />
+            <Label Margin="0,300,0,0" Content="Data wygaśnięcia ubezpieczenia" />
             <DatePicker
                 Name="InsuranceDateOfExpiry"
                 Margin="370,300,0,0"
                 SelectedDate="{Binding InsuranceDateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,375,0,0" Content="Extinguisher Date of Expiry" />
+            <Label Margin="0,375,0,0" Content="Data ważności gaśnicy" />
             <DatePicker
                 Name="ExtinguisherDateOfExpiry"
                 Margin="370,375,0,0"
@@ -117,7 +117,7 @@
                 Margin="0,23,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Content="Insert data to add a new trailer" />
+                Content="Wprowadź dane aby dodać nową przyczepę" />
             <Button
                 Width="99"
                 Height="30"
@@ -125,7 +125,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Add"
+                Content="Dodaj"
                 Style="{StaticResource CustomButtonStyle}" />
             <Label Margin="370,475,0,0" Content=" " />
         </Grid>

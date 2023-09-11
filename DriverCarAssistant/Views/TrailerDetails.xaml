@@ -57,29 +57,29 @@
             <Label
                 Name="Name"
                 Margin="0,35,0,0"
-                Content="Name" />
+                Content="Nazwa" />
             <Label
                 Name="Number"
                 Margin="0,70,0,0"
-                Content="Number" />
+                Content="Numer" />
             <Label
                 Name="InsuranceDateOfIssue"
                 Margin="0,105,0,0"
-                Content="Insurance Date of Issue" />
+                Content="Data wystawienia ubezpieczenia" />
             <Label
                 Name="InsuranceDateOfExpiry"
                 Margin="0,140,0,0"
-                Content="Insurance Date of Expiry" />
+                Content="Data wygaśnięcia ubezpieczenia" />
             <Label
                 Name="ExtinguisherDateOfExpiry"
                 Margin="0,175,0,0"
-                Content="Extinguisher Date of Expiry" />
+                Content="Data ważności gaśnicy" />
 
             <Button
                 Margin="0,47,25,0"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Delete this trailer"
+                Content="Usuń tę przyczepę"
                 Style="{StaticResource CustomButtonStyle}" />
             <StackPanel
                 Margin="0,100,10,0"
@@ -87,11 +87,11 @@
                 Orientation="Vertical">
                 <Button
                     Click="Button_Click_Insurance"
-                    Content="Add new Insurance"
+                    Content="Dodaj nowe ubezpieczenie"
                     Style="{StaticResource CustomButtonStyle}" />
                 <Button
                     Click="Button_Click_Extinguisher"
-                    Content="Add new Extinguisher"
+                    Content="Dodaj nową gaśnicę"
                     Style="{StaticResource CustomButtonStyle}" />
             </StackPanel>
         </Grid>

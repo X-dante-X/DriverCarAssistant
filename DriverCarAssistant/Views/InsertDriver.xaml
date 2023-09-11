@@ -82,7 +82,7 @@
                 Margin="0,23,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Content="Insert data to add a new driver" />
+                Content="Wprowadź dane, aby dodać nowego kierowcę" />
 
             <Label Margin="0,75,0,0" Content="PESEL" />
             <TextBox
@@ -92,105 +92,105 @@
                 Style="{StaticResource CustomTextBoxStyle}"
                 Text="{Binding PESEL}" />
 
-            <Label Margin="0,150,0,0" Content="First name" />
+            <Label Margin="0,150,0,0" Content="Imię" />
             <TextBox
                 Name="FirstName"
                 Margin="370,150,0,0"
                 Style="{StaticResource CustomTextBoxStyle}"
                 Text="{Binding FirstName}" />
 
-            <Label Margin="0,225,0,0" Content="Second name" />
+            <Label Margin="0,225,0,0" Content="Nazwisko" />
             <TextBox
                 Name="SecondName"
                 Margin="370,225,0,0"
                 Style="{StaticResource CustomTextBoxStyle}"
                 Text="{Binding SecondName}" />
 
-            <Label Margin="0,300,0,0" Content="Passport Number" />
+            <Label Margin="0,300,0,0" Content="Numer paszportu" />
             <TextBox
                 Name="PassportNumber"
                 Margin="370,300,0,0"
                 Style="{StaticResource CustomTextBoxStyle}"
                 Text="{Binding Passport.PassportNumber}" />
 
-            <Label Margin="0,375,0,0" Content="Passport Date of Birth" />
+            <Label Margin="0,375,0,0" Content="Data urodzenia" />
             <DatePicker
                 Name="PassportDateOfBirth"
                 Margin="370,375,0,0"
                 SelectedDate="{Binding Passport.DateOfBirth}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,450,0,0" Content="Passport Date of Issue" />
+            <Label Margin="0,450,0,0" Content="Data wydania paszportu" />
             <DatePicker
                 Name="PassportDateOfIssue"
                 Margin="370,450,0,0"
                 SelectedDate="{Binding Passport.DateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,525,0,0" Content="Passport Date of Expiry" />
+            <Label Margin="0,525,0,0" Content="Data ważności paszportu" />
             <DatePicker
                 Name="PassportDateOfExpiry"
                 Margin="370,525,0,0"
                 SelectedDate="{Binding Passport.DateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,600,0,0" Content="Driving License Date of Issue" />
+            <Label Margin="0,600,0,0" Content="Data wydania prawa jazdy" />
             <DatePicker
                 Name="DrivingLicenseDateOfIssue"
                 Margin="370,600,0,0"
                 SelectedDate="{Binding DrivingLicense.DateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,675,0,0" Content="Driving License Date of Expiry" />
+            <Label Margin="0,675,0,0" Content="Data ważności prawa jazdy" />
             <DatePicker
                 Name="DrivingLicenseDateOfExpiry"
                 Margin="370,675,0,0"
                 SelectedDate="{Binding DrivingLicense.DateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,750,0,0" Content="Code 95 Date of Issue" />
+            <Label Margin="0,750,0,0" Content="Kod 95 Data wydania" />
             <DatePicker
                 Name="Code95DateOfIssue"
                 Margin="370,750,0,0"
                 SelectedDate="{Binding Code95DateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,825,0,0" Content="Code 95 Date of Expiry" />
+            <Label Margin="0,825,0,0" Content="Kod 95 Data ważności" />
             <DatePicker
                 Name="Code95DateOfExpiry"
                 Margin="370,825,0,0"
                 SelectedDate="{Binding Code95DateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,900,0,0" Content="Visa Number" />
+            <Label Margin="0,900,0,0" Content="Numer wizy" />
             <TextBox
                 Name="VisaNumber"
                 Margin="370,900,0,0"
                 Style="{StaticResource CustomTextBoxStyle}"
                 Text="{Binding Visa.VisaNumber}" />
 
-            <Label Margin="0,975,0,0" Content="Visa Date of Issue" />
+            <Label Margin="0,975,0,0" Content="Data wydania wizy" />
             <DatePicker
                 Name="VisaDateOfIssue"
                 Margin="370,975,0,0"
                 SelectedDate="{Binding Visa.DateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,1050,0,0" Content="Visa Date of Expiry" />
+            <Label Margin="0,1050,0,0" Content="Data ważności wizy" />
             <DatePicker
                 Name="VisaDateOfExpiry"
                 Margin="370,1050,0,0"
                 SelectedDate="{Binding Visa.DateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,1125,0,0" Content="TachoKard Date of Issue" />
+            <Label Margin="0,1125,0,0" Content="Data wydania karty Tacho" />
             <DatePicker
                 Name="TachoKardDateOfIssue"
                 Margin="370,1125,0,0"
                 SelectedDate="{Binding TachoKardDateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,1200,0,0" Content="TachoKard Date of Expiry" />
+            <Label Margin="0,1200,0,0" Content="Data ważności karty Tacho" />
             <DatePicker
                 Name="TachoKardDateOfExpiry"
                 Margin="370,1200,0,0"
@@ -204,7 +204,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Add"
+                Content="Dodaj"
                 Style="{StaticResource CustomButtonStyle}" />
             <Label Margin="370,1300,0,0" Content=" " />
         </Grid>

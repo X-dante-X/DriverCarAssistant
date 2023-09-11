@@ -32,7 +32,7 @@ namespace DriverCarAssistant.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             using Context context = new Context();
-            Car.Service = int.Parse(((TextBox)FindName("Service")).Text);
+            Car.Service = !string.IsNullOrEmpty(((TextBox)FindName("Service")).Text) ? int.Parse(((TextBox)FindName("Service")).Text) : 0;
             context.SaveChanges();
             CarDetails newPage = new CarDetails(Car);
             NavigationService navigationService = NavigationService.GetNavigationService(this);

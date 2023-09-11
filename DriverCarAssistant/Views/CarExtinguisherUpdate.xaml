@@ -73,9 +73,9 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Click="Button_Click"
-            Content="Update"
+            Content="Zaktualizuj"
             Style="{StaticResource CustomButtonStyle}" />
-        <Label Margin="160,200,0,0" Content="Date of Expiry" />
+        <Label Margin="160,200,0,0" Content="Data ważności" />
 
     </Grid>
 </Page>

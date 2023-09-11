@@ -77,7 +77,7 @@
                 x:Name="mainFrame"
                 JournalOwnership="OwnsJournal"
                 NavigationUIVisibility="Hidden" />
-            <Label Margin="0,75,0,0" Content="Name" />
+            <Label Margin="0,75,0,0" Content="Nazwa" />
             <TextBox
                 Name="Name"
                 Margin="370,75,0,0"
@@ -87,7 +87,7 @@
                 Text="{Binding Name}"
                 TextWrapping="Wrap" />
 
-            <Label Margin="0,150,0,0" Content="Number" />
+            <Label Margin="0,150,0,0" Content="Numer" />
             <TextBox
                 Name="Number"
                 Margin="370,150,0,0"
@@ -97,84 +97,84 @@
                 Text="{Binding Number}"
                 TextWrapping="Wrap" />
 
-            <Label Margin="0,225,0,0" Content="License Date of Issue" />
+            <Label Margin="0,225,0,0" Content="Data wydania licencji" />
             <DatePicker
                 Name="LicenseDateOfIssue"
                 Margin="370,225,0,0"
                 SelectedDate="{Binding LicenseDateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,300,0,0" Content="License Date of Expiry" />
+            <Label Margin="0,300,0,0" Content="Data wygaśnięcia licencji" />
             <DatePicker
                 Name="LicenseDateOfExpiry"
                 Margin="370,300,0,0"
                 SelectedDate="{Binding LicenseDateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,375,0,0" Content="Maintenance Date of Issue" />
+            <Label Margin="0,375,0,0" Content="Data wydania konserwacji" />
             <DatePicker
                 Name="MaintenanceDateOfIssue"
                 Margin="370,375,0,0"
                 SelectedDate="{Binding MaintenanceDateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,450,0,0" Content="Maintenance Date of Expiry" />
+            <Label Margin="0,450,0,0" Content="Data wygaśnięcia konserwacji" />
             <DatePicker
                 Name="MaintenanceDateOfExpiry"
                 Margin="370,450,0,0"
                 SelectedDate="{Binding MaintenanceDateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,525,0,0" Content="Insurance Date of Issue" />
+            <Label Margin="0,525,0,0" Content="Data wystawienia ubezpieczenia" />
             <DatePicker
                 Name="InsuranceDateOfIssue"
                 Margin="370,525,0,0"
                 SelectedDate="{Binding InsuranceDateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,600,0,0" Content="Insurance Date of Expiry" />
+            <Label Margin="0,600,0,0" Content="Data wygaśnięcia ubezpieczenia" />
             <DatePicker
                 Name="InsuranceDateOfExpiry"
                 Margin="370,600,0,0"
                 SelectedDate="{Binding InsuranceDateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,675,0,0" Content="LPacket Date of Issue" />
+            <Label Margin="0,675,0,0" Content="Data wydania Lpakietu" />
             <DatePicker
                 Name="LPacketDateOfIssue"
                 Margin="370,675,0,0"
                 SelectedDate="{Binding LPacketDateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,750,0,0" Content="LPacket Date of Expiry" />
+            <Label Margin="0,750,0,0" Content="Data ważności Lpakietu" />
             <DatePicker
                 Name="LPacketDateOfExpiry"
                 Margin="370,750,0,0"
                 SelectedDate="{Binding LPacketDateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,825,0,0" Content="Tacho Calibration Date of Issue" />
+            <Label Margin="0,825,0,0" Content="Data wydania kalibracji tacho" />
             <DatePicker
                 Name="TachoCalibrationDateOfIssue"
                 Margin="370,825,0,0"
                 SelectedDate="{Binding TachoCalibrationDateOfIssue}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,900,0,0" Content="Tacho Calibration Date of Expiry" />
+            <Label Margin="0,900,0,0" Content="Data ważności kalibracji tacho" />
             <DatePicker
                 Name="TachoCalibrationDateOfExpiry"
                 Margin="370,900,0,0"
                 SelectedDate="{Binding TachoCalibrationDateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,975,0,0" Content="Extinguisher Date of Expiry" />
+            <Label Margin="0,975,0,0" Content="Data ważności gaśnicy" />
             <DatePicker
                 Name="ExtinguisherDateOfExpiry"
                 Margin="370,975,0,0"
                 SelectedDate="{Binding ExtinguisherDateOfExpiry}"
                 Style="{StaticResource CustomDatePickerStyle}" />
 
-            <Label Margin="0,1050,0,0" Content="Service" />
+            <Label Margin="0,1050,0,0" Content="Serwis " />
             <TextBox
                 Name="Service"
                 Margin="370,1050,0,0"
@@ -186,7 +186,7 @@
                 Margin="0,23,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Content="Insert data to add a new car" />
+                Content="Wprowadź dane, aby dodać nowy samochód" />
             <Label Margin="370,1150,0,0" Content=" " />
             <Button
                 Width="99"
@@ -195,7 +195,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Click="Button_Click"
-                Content="Add"
+                Content="Dodaj"
                 Style="{StaticResource CustomButtonStyle}" />
         </Grid>
     </ScrollViewer>
